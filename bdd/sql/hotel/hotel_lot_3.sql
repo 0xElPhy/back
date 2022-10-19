@@ -24,7 +24,8 @@ ORDER BY 2 DESC
 
 -- 16 - Afficher la liste des hôtels pour lesquels M.Squire a effectué une réservation
 SELECT DISTINCT
-hot_nom AS 'Liste des hôtels où M.Squire a effectué une reservation',
+cli_nom,
+hot_nom,
 COUNT(*) AS 'Nombre de reservations effectuées'
 FROM reservation
 JOIN chambre ON res_cha_id = cha_id

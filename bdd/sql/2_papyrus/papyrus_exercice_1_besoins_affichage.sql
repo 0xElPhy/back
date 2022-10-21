@@ -119,8 +119,7 @@ WHERE vente.prix1 < (
 	-- Sous-requête : Récupérer le moins cher des articles de type 'ruban'
 	SELECT MIN(vente.prix1)
 	FROM vente
-	JOIN produit ON produit.codart = vente.codart
-	WHERE produit.libart LIKE 'r%'
+	WHERE vente.codart LIKE 'r%'
 )
 ORDER BY vente.prix1 DESC;
 

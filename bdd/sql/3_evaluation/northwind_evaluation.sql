@@ -14,13 +14,6 @@ JOIN products ON products.SupplierID = suppliers.SupplierID
 WHERE suppliers.CompanyName LIKE 'Exotic Liquids%'
 ORDER BY products.UnitPrice DESC;
 
--- 3 - Nombre de produits mis à disposition par les fournisseurs français (tri par nombre de produits décroissant) :
-SELECT suppliers.CompanyName, `order details`.Quantity
-FROM suppliers
-JOIN products ON products.SupplierID = suppliers.SupplierID
-JOIN `order details` ON `order details`.ProductID = products.ProductID
-WHERE suppliers.Country LIKE 'France';
-
 -- 3 - Nombre de produits mis à disposition par les fournisseurs français (tri par nombre de produits dé>
 SELECT suppliers.CompanyName, COUNT(*) AS 'Nombre de produits'
 FROM suppliers
@@ -41,7 +34,7 @@ ORDER BY 2 DESC;
 -- 5 - Liste des clients dont le montant cumulé de toutes les commandes passées est supérieur à 30000 € :
 SELECT
 customers.CompanyName,
-ROUND(SUM(`order details`.UnitPrice * `order details`.Quantity),0) AS 'CA',
+ROUND( SUM(`order details`.UnitPrice * `order details`.Quantity) ,0) AS 'CA',
 customers.Country
 FROM customers
 JOIN orders ON orders.CustomerID = customers.CustomerID
@@ -54,7 +47,7 @@ ORDER BY 2 DESC;
 SELECT DISTINCT orders.ShipCountry
 FROM orders
 JOIN `order details` ON `order details`.OrderID = orders.OrderID
-JOIN products ON products.ProduitID = `order details`.ProductID
+JOIN products ON products.ProductID = `order details`.ProductID
 JOIN suppliers ON suppliers.SupplierID = products.SupplierID
 WHERE suppliers.CompanyName LIKE 'Exotic Liquids%'
 ORDER BY 1;

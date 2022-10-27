@@ -39,7 +39,7 @@
     <?php
         $date = new DateTime();
         $date = $date -> format("Y");
-        $bissextile = is_int($date/4) && !is_int($date/100) || is_int($date/400);
+        $bissextile = (is_int($date/4) && !is_int($date/100)) || is_int($date/400);
         
         if ($bissextile) {
             echo "Année bissextile";

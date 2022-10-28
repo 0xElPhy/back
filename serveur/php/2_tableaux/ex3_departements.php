@@ -16,27 +16,33 @@
         );
 
         // 1. Affichez la liste des régions (par ordre alphabétique) suivie du nom des départements
+
         asort($departements);
         echo "1. Affichez la liste des régions (par ordre alphabétique) suivie du nom des départements :<br><br>";
 
         foreach($departements as $region => $value)
         {
             echo $region." : ";
+            var_dump($value);
             foreach($value as $dep) {
                 echo $dep.", ";
             }
             echo "<br>";
         }
         echo $dep."<br><br>";
+
         // -- -- --
 
+
         // 2. Affichez la liste des régions suivie du nombre de départements
+
         asort($departements);
         echo "2. Affichez la liste des régions suivie du nombre de départements :<br><br>";
 
         foreach($departements as $region => $list_dep) {
             echo $region." : ".count($list_dep)." départements<br>";
         }
+
         // -- -- --
     ?>
 </body>

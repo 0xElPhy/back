@@ -1,6 +1,4 @@
-<?php
-    include "db.php";
-    
+<?php   
     // Récupération du Nom :
     if (isset($_POST['nom']) && $_POST['nom'] != "") {
         $nom = $_POST['nom'];
@@ -19,6 +17,7 @@
     }
 
     // S'il n'y a pas eu de redirection vers le formulaire (= si la vérification des données est ok) :
+    require "db.php";
     $db = connexionBase();
 
     try {

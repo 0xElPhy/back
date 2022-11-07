@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/formulaire.css">
+    <title>Formulaire</title>
+</head>
+<body>
+    <section class="verticale vtc4" name="form_card">
+        <section class="horizontale hor16">
+            <h3 class="">PHP - Partie 5<br>Les Formulaires</h3>
+            <form class="formulaire" id="form1" action="monscript.php" method="post"> <!-- method="post" -->
+                <fieldset>
+                    <h4>Coordonnées</h4>
+                    <p style="color:#f00"><strong>* Ces zones sont obligatoires pour envoyer le formulaire.</strong></p>
+                    <br>
+                    <section class="section_form f1">
+                        <label class="label_f" for="société">Société :</label>
+                        <div class="inbox d1">
+                            <div class="div div1">
+                                <input class="saisie" type="text" id="societe" name="societe">
+                                <legend class="legend_f">*</legend>
+                            </div>
+                            <legend class="legend_f" id="legende_s" hidden></legend>
+                        </div>
+                    </section>
+                    <section class="section_form f2">
+                        <label class="label_f" for="personne">Personne à contacter :</label>
+                        <div class="inbox d1">
+                            <div class="div div1">
+                                <input class="saisie" type="text" id="personne" name="personne">
+                                <legend class="legend_f">*</legend>
+                            </div>
+                            <legend class="legend_f" id="legende_p" hidden></legend>
+                        </div>
+                    </section>
+                    <section class="section_form f3">
+                        <label class="label_f" id="txt_adresse" for="adresse">Adresse de l'entreprise :</label>
+                        <div class="inbox d1">
+                            <textarea class="zonetxt" id="txt_area_1" name="adresse_ent" rows="3" cols="25"></textarea>
+                        </div>
+                    </section>
+                    <section class="section_form f4">
+                        <label class="label_f" for="code_postal">Code Postal :</label>
+                        <div class="inbox d1">
+                            <div class="div div1">
+                                <input class="saisie" type="text" id="cp" name="code_postal" maxlength="5">
+                                <legend class="legend_f">*</legend>
+                            </div>
+                            <legend class="legend_f" id="legende_cp" hidden></legend>
+                        </div>
+                    </section>
+                    <section class="section_form f5">
+                        <label class="label_f" for="ville">Ville :</label>
+                        <div class="inbox d1">
+                            <div class="div div1">
+                                <input class="saisie" type="text" id="ville" name="ville">
+                                <legend class="legend_f">*</legend>
+                            </div>
+                            <legend class="legend_f" id="legende_v" hidden></legend>
+                        </div>
+                    </section>
+                    <section class="section_form f6">
+                        <label class="label_f" for="email">E-mail :</label>
+                        <div class="inbox d1">
+                            <div class="div div1">
+                                <input class="saisie" type="text" id="email" name="email">
+                                <legend class="legend_f">*</legend>
+                            </div>
+                            <legend class="legend_f" id="legende_e" hidden></legend>
+                        </div>
+                    </section>
+                    <section class="section_form f7">
+                        <label class="label_f" for="télephone">Téléphone :</label>
+                        <div class="inbox d1">
+                            <div class="div div1">
+                                <input class="saisie" type="text" id="tel" name="téléphone">
+                            </div>
+                            <legend class="legend_f" id="legende_t" hidden></legend>
+                        </div>
+                    </section>
+                    <section class="section_form f8">
+                        <div class ="inbox d0">
+                            <label class="label_f f1" id="txt_prog" for="projet">Sélectionnez<br>l'environnement<br> technique du projet :</label>
+                            <label class="label_f f2">
+                                <select id="tab_prog"  name="tab_prog"> 
+                                    <option value="">Choisissez</option>
+                                    <option value="Access">Access</option>
+                                    <option value="Java">Java</option>
+                                    <option value="Delphi">Delphi</option>
+                                    <option value="Windev">Windev</option>
+                                    <option value="Visual Basic">Visual Basic</option>
+                                    <option value="Power Builder">Power Builder</option>
+                                    <option value="Internet">Internet</option>
+                                    <option value="Intranet">Intranet</option>
+                                    <option value="Windows NT">Windows NT</option>
+                                    <option value="Unix">Unix</option>
+                                    <option value="SQL Server">SQL Server</option>
+                                    <option value="Oracle">Oracle</option>
+                                    <option value="Autres...">Autres...</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="inbox d1">
+                            <textarea class="zonetxt" id="txt_area_2" rows="3" cols="25" readonly></textarea>
+                        </div>
+                    </section>
+                </fieldset>
+                <section class="section_valider">
+                    <button class="button-62" id="valide" type="button">Envoyer</button>
+                    <button class="button-62" id="annule" role="button" type="reset">Effacer</button>
+                </section>
+            </form>
+        </section>
+    </section>
+
+    <script src="assets/formulaire.js"></script>
+</body>
+</html>

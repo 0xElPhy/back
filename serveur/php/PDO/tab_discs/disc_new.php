@@ -2,7 +2,7 @@
     require "../db.php";
     $db = connexionBase();
 
-    $requete = $db->query("SELECT artist_name FROM artist");
+    $requete = $db->query("SELECT * FROM artist");
     $myArtist = $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
 ?>
@@ -28,15 +28,16 @@
         <br><br>
 
         <label for="artiste_for_label">Artiste</label><br>
-        <select name="artiste" id="artiste_for_label">
-            <option value="">Sélectionnez un artiste</option>
+        <select name="artist_id" id="artiste_for_label">
+            <option value="0">Sélectionnez un artiste</option>
             <?php
                 foreach ($myArtist as $artiste)
                 {
-                    echo "<option value='$artiste->artist_name'> $artiste->artist_name </option>";
+                    echo "<option value='$artiste->artist_id'> $artiste->artist_name </option>";
                 }
             ?>
         </select>
+
         <a href="/back/serveur/php/PDO/tab_artists/artist_new.php">Ajouter un artiste</a>
         <br><br>
 
@@ -58,10 +59,11 @@
 
         <label for="pochette_for_label">Image pochette</label><br>
         <input type="file" name="pochette" id="pochette__for_label">
-        <br><br>
+        <!-- <img src='</?=$_FILES["pochette"]["tmp_name"]?>'> -->
+        <br><br><br>
 
+        <input type="reset" value="Annuler">
         <input type="submit" value="Ajouter">
-        <a href="discs.php"><input type="reset" value="Annuler"></a>
     </form>
     <br>
     <a href="javascript:history.go(-1)"><button>Retour</button></a>

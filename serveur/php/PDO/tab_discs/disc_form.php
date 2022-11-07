@@ -33,7 +33,7 @@
     <br>
 
     <form action="script_disc_ajout.php" method="post">
-        <input hidden name="id" value="<?= $myDisc->disc_id ?>">
+        <input hidden name="id" id="id_for_label" value="<?= $myDisc->disc_id ?>">
 
         <label for="titre_for_label">Titre</label>
         <input type="text" name="titre" id="titre_for_label" value="<?= $myDisc->disc_title ?>">
@@ -72,7 +72,7 @@
         <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $myDisc->disc_picture ?>" id="img_for_label" title="<?= $myDisc->disc_picture ?>" alt="img pochette <?= $myDisc->disc_picture ?>" width="400" height="400">
         <br><br>
 
-        <a href="javascript:history.go(-1)"><input type="reset" value="Annuler"></a>
+        <input type="reset" value="Annuler">
         <input type="submit" value="Valider">
     
     </form>

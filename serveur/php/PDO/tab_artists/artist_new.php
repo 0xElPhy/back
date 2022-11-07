@@ -12,8 +12,6 @@
 
     <h1>Saisie d'un nouvel artiste</h1>
 
-    <a href="artists.php"><button>Retour à la liste des artistes</button></a>
-
     <br>
     <br>
 
@@ -30,7 +28,10 @@
         <input type="submit" value="Ajouter">
 
     </form>
+    <br>
 
+    <a href="javascript:history.go(-1)"><button>Retour</button></a>
+    
     <?php include('../structure/footer.php'); ?>
 </body>
 </html>

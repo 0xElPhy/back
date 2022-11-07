@@ -31,7 +31,15 @@
 
         <?php //var_dump($artist); // Le var_dump() est écrit à titre informatif ?>
         <tr>
-            <td><a href="disc_details.php?id=<?= $disque->disc_id ?>"><img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $disque->disc_picture ?>" title="<?=$disque->disc_title?>" alt="img disc <?=$disque->disc_title?>" width="200" height="200"></a></td>
+            <td>
+                <a href="disc_details.php?id=<?= $disque->disc_id ?>">
+                    <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $disque->disc_picture ?>"
+                    title="<?=$disque->disc_title?>"
+                    alt="img disc <?=$disque->disc_title?>"
+                    width="200"
+                    height="200">
+                </a>
+            </td>
             <td><span><b><?= $disque->disc_title ?></b></span>
                 <br>
                 <span><b><a href="/back/serveur/php/PDO/tab_artists/artist_detail.php?id=<?= $disque->artist_id ?>"><?= $disque->artist_name ?></a></b><span>

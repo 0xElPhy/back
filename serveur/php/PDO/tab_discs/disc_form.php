@@ -3,13 +3,19 @@
     $db = connexionBase();
 
     // Requête 1 : 
-    $requete = $db->prepare("SELECT * FROM disc JOIN artist ON artist.artist_id = disc.artist_id WHERE disc_id=?");
+    $requete = $db->prepare(
+            "SELECT *
+            FROM disc
+            JOIN artist ON
+            artist.artist_id = disc.artist_id
+            WHERE disc_id=?"
+            );
     $requete->execute(array($_GET["id"]));
     $myDisc = $requete->fetch(PDO::FETCH_OBJ);
     $requete->closeCursor();
 
     // Requête 2 : 
-    $requete = $db->query("SELECT artist_name FROM artist");
+    $requete = $db->query("SELECT * FROM artist ORDER BY artist_name ASC");
     $myArtist = $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
 ?>
@@ -24,35 +30,36 @@
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
-    <?php include('../structure/footer.php'); ?>
     <h1>Fiche Disque n°<?= $myDisc->disc_id; ?></h1>
-    
-    <a href="disc_details.php?id=<?= $myDisc->disc_id ?>">Retour à la fiche détails</a>
-
     <br>
     <br>
 
     <form action="script_disc_ajout.php" method="post">
-        <input hidden name="id" id="id_for_label" value="<?= $myDisc->disc_id ?>">
+        <input hidden name="disc_id" id="disc_id_for_label" value="<?= $myDisc->disc_id ?>">
 
         <label for="titre_for_label">Titre</label>
         <input type="text" name="titre" id="titre_for_label" value="<?= $myDisc->disc_title ?>">
         <br><br>
         
-        <label for="artiste_for_label">Artiste</label>
-        <select name="artiste" id="artiste_for_label">
-            <option value="<?=$myDisc->artist_name ?>"><?= $myDisc->artist_name ?></option>
+        <label for="artiste_id_for_label">Artiste</label>
+        <select name="artiste_id" id="artiste_id_for_label">
+            <option value="<?=$myDisc->artist_id ?>"><?= $myDisc->artist_name ?></option>
             <?php
                 foreach ($myArtist as $artiste)
                 {
-                echo "<option value='$artiste->artist_name'> $artiste->artist_name </option>";
+                    if ($artiste->artist_id == $myDisc->artist_id) {
+                        continue;
+                    }
+                    else {
+                        echo "<option value='$artiste->artist_id'> $artiste->artist_name </option>";
+                    }
                 }
             ?>
         </select>
         <br><br>
         
-        <label for="année_for_label">Année</label>
-        <input type="text" name="année" id="année_for_label" value="<?= $myDisc->disc_year ?>">
+        <label for="annee_for_label">Année</label>
+        <input type="text" name="annee" id="annee_for_label" value="<?= $myDisc->disc_year ?>">
         <br><br>
         
         <label for="genre_for_label">Genre</label>
@@ -68,8 +75,14 @@
         <br><br>
         
         <label for="pochette_for_label">Pochette</label>
-        <br>
-        <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $myDisc->disc_picture ?>" id="img_for_label" title="<?= $myDisc->disc_picture ?>" alt="img pochette <?= $myDisc->disc_picture ?>" width="400" height="400">
+        <input type="file" name="pochette" id="id_for_label" value="$myDisc->disc_picture">
+        <br><br>
+
+        <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $myDisc->disc_picture ?>"
+            id="img_for_label"
+            title="<?= $myDisc->disc_picture ?>"
+            alt="img pochette <?= $myDisc->disc_picture ?>"
+            width="400" height="400">
         <br><br>
 
         <input type="reset" value="Annuler">
@@ -78,5 +91,6 @@
     </form>
     
     <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
+    <?php include('../structure/footer.php'); ?> 
 </body>
 </html>

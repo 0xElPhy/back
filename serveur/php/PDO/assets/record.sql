@@ -20,7 +20,8 @@ INSERT INTO artist (artist_id, artist_name) VALUES
 (7, 'Marillion'),
 (8, 'Bob Dylan'),
 (9, 'Fleshtones'),
-(10, 'The Clash');
+(10, 'The Clash'),
+(11, 'Kendrick Lamar');
 
 
 CREATE TABLE disc (
@@ -41,7 +42,7 @@ INSERT INTO disc (disc_id, disc_title, disc_year, disc_picture, disc_label, disc
 	(2, 'Songs for the Deaf', 2002, 'Songs for the Deaf.jpeg', 'Interscope Records', 'Rock/Stoner', 12.99, 4),
 	(3, 'Harvest Moon', 1992, 'Harvest Moon.jpeg', 'Reprise Records', 'Rock', 4.20, 1),
 	(4, 'Initials BB', 1968, 'Initials BB.jpeg', 'Philips', ' Chanson, Pop Rock', 12.99, 5),
-	(5, 'After the Gold Rush', 1970, 'After the Gold Rush.jpeg', ' Reprise Records', 'Country Rock', 20.00, 1),
+	(5, 'After the Gold Rush', 1970, 'After the Gold Rush.jpeg', 'Reprise Records', 'Country Rock', 20.00, 1),
 	(6, 'Broken Arrow', 1996, 'Broken Arrow.jpeg', 'Reprise Records', ' Country Rock, Classic Rock', 15.00, 1),
 	(7, 'Highway To Hell', 1979, 'Highway To Hell.jpeg', 'Atlantic', 'Hard Rock', 15.00, 6),
 	(8, 'Drama', 1980, 'Drama.jpeg', 'Atlantic', 'Prog', 15.00, 2),

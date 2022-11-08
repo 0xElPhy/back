@@ -21,8 +21,6 @@
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
-    <?php include('../structure/footer.php'); ?>
-
 
     <br>
     <table border=1>
@@ -49,5 +47,7 @@
     
     <br>
     <a href="artist_new.php"><input value="Ajouter artiste" type="button"></a>
-    </body>
+
+    <?php include('../structure/footer.php'); ?>
+</body>
 </html>

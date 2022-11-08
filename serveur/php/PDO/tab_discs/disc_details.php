@@ -62,7 +62,7 @@
         <label>Pochette</label>
         <br>
         <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $myDisc->disc_picture ?>"
-            title="<?= $myDisc->disc_picture ?>"
+            title="<?= $myDisc->disc_title ?>"
             alt="img pochette <?= $myDisc->disc_picture ?>"
             width="400"
             height="400">

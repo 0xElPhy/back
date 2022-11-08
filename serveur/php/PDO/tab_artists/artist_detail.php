@@ -45,7 +45,7 @@
         <br>
         Nom de l'artiste : <?= $myArtist->artist_name ?>
         <br>
-        Site Internet : <?= $myArtist->artist_url ?>
+        Site Internet : <a href="<?= $myArtist->artist_url ?>"><?= $myArtist->artist_url ?></a>
         <br>
         Discographie :
         <?php

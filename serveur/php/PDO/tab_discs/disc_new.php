@@ -2,7 +2,7 @@
     require "../db.php";
     $db = connexionBase();
 
-    $requete = $db->query("SELECT * FROM artist");
+    $requete = $db->query("SELECT * FROM artist ORDER BY artist_name ASC");
     $myArtist = $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
 ?>
@@ -16,6 +16,7 @@
     <title>Ajout Disque</title>
 </head>
 <body>
+    <!-- Chargement du header -->
     <?php include('../structure/header.php'); ?> 
 
     <h1>Le formulaire d'ajout</h1>
@@ -27,8 +28,8 @@
         <input type="text" name="titre" id="titre_for_label" placeholder="Entrez un titre">
         <br><br>
 
-        <label for="artiste_for_label">Artiste</label><br>
-        <select name="artist_id" id="artiste_for_label">
+        <label for="artiste_id_for_label">Artiste</label><br>
+        <select name="artist_id" id="artiste_id_for_label">
             <option value="0">Sélectionnez un artiste</option>
             <?php
                 foreach ($myArtist as $artiste)
@@ -41,8 +42,8 @@
         <a href="/back/serveur/php/PDO/tab_artists/artist_new.php">Ajouter un artiste</a>
         <br><br>
 
-        <label for="année_for_label">Année</label><br>
-        <input type="text" name="année" id="année_for_label" placeholder="Entrez l'année de sortie">
+        <label for="annee_for_label">Année</label><br>
+        <input type="text" name="annee" id="annee_for_label" placeholder="Entrez l'année de sortie">
         <br><br>
 
         <label for="genre_for_label">Genre</label><br>
@@ -58,8 +59,7 @@
         <br><br>
 
         <label for="pochette_for_label">Image pochette</label><br>
-        <input type="file" name="pochette" id="pochette__for_label">
-        <!-- <img src='</?=$_FILES["pochette"]["tmp_name"]?>'> -->
+        <input type="file" name="pochette">
         <br><br><br>
 
         <input type="reset" value="Annuler">
@@ -68,6 +68,7 @@
     <br>
     <a href="javascript:history.go(-1)"><button>Retour</button></a>
     
+    <!-- Chargement du footer -->
     <?php include('../structure/footer.php'); ?>
 </body>
 </html>

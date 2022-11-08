@@ -35,9 +35,8 @@
                 <a href="disc_details.php?id=<?= $disque->disc_id ?>">
                     <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $disque->disc_picture ?>"
                     title="<?=$disque->disc_title?>"
-                    alt="img disc <?=$disque->disc_title?>"
-                    width="200"
-                    height="200">
+                    alt="<?=$disque->disc_picture?>"
+                    width="200" height="200">
                 </a>
             </td>
             <td><span><b><?= $disque->disc_title ?></b></span>

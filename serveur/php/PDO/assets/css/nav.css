@@ -1,0 +1,41 @@
+@font-face {
+    font-family: adventure;
+    src: url(../font/adventure/Adventure.otf);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav a {
+    text-decoration: none;
+    border-right: 0.2rem rgb(241, 241, 243);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(41, 46, 65);
+}
+
+nav a:hover {
+    background-color: rgb(27, 32, 48);
+}
+
+nav h2 {
+    font-family: adventure;
+    font-size: 40px;
+
+    letter-spacing: 15px;
+
+    color: rgb(241, 241, 243);
+
+    margin: 0.5rem;
+}
+
+nav .artistes h2:hover {
+    color: #FF6666;
+}
+
+nav .disques h2:hover {
+    color: #6b66ff;
+}

@@ -31,6 +31,7 @@
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
+    <?php include('../structure/nav.php'); ?>
 
     <h1>Disque Détails</h1>
 

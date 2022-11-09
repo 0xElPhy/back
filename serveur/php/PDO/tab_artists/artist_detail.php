@@ -38,6 +38,7 @@
     </head>
 
     <?php include('../structure/header.php'); ?>
+    <?php include('../structure/nav.php'); ?>
 
     <body>
         <br>
@@ -45,23 +46,21 @@
         <br>
         Nom de l'artiste : <?= $myArtist->artist_name ?>
         <br>
-        Site Internet : <a href="<?= $myArtist->artist_url ?>"><?= $myArtist->artist_url ?></a>
+        Site Internet : <a href="<?= $myArtist->artist_url ?>" target="_blank"><?= $myArtist->artist_url ?></a>
         <br>
         Discographie :
         <?php
-        if ($discography) {
-            echo "<ul>";
-            foreach ($discography as $disque)
-            {
-                echo "<li><a href='/back/serveur/php/PDO/tab_discs/disc_details.php?id=$disque->disc_id>'>$disque->disc_title ($disque->disc_year)</a></li>";
+            if ($discography) {
+                echo "<ul>";
+                foreach ($discography as $disque)
+                {
+                    echo "<li><a href='/back/serveur/php/PDO/tab_discs/disc_details.php?id=$disque->disc_id>'>$disque->disc_title ($disque->disc_year)</a></li>";
+                }
+                echo "</ul>";
             }
-            
-            echo "</ul>";
-        }
-    
-        else {
-            echo "Aucune discographie renseignée, <a href='/back/serveur/php/PDO/tab_discs/disc_new.php'>cliquez ici</a> pour ajouter un disque de cet artiste";
-        }
+            else {
+                echo "Aucune discographie renseignée, <a href='/back/serveur/php/PDO/tab_discs/disc_new.php'>cliquez ici</a> pour ajouter un disque de cet artiste";
+            }
         ?>
         <br><br>
 

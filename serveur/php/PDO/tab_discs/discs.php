@@ -19,7 +19,8 @@
 </head>
 <body>
 
-    <?php include('../structure/header.php'); ?> 
+    <?php include('../structure/header.php'); ?>
+    <?php include('../structure/nav.php'); ?>
  
     <h1>Liste des disques (<?php echo "en cours" ?>)</h1>
 

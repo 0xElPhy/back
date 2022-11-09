@@ -8,7 +8,7 @@
             FROM disc
             JOIN artist ON
             artist.artist_id = disc.artist_id
-            WHERE disc_id=?"
+            WHERE disc_id = ?;"
             );
     $requete->execute(array($_GET["id"]));
     $myDisc = $requete->fetch(PDO::FETCH_OBJ);
@@ -30,24 +30,26 @@
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
-    <h1>Fiche Disque n°<?= $myDisc->disc_id; ?></h1>
+    <?php include('../structure/nav.php'); ?>
+
+    <h1>Fiche Disque n°<?= $myDisc->disc_id ?></h1>
     <br>
     <br>
 
-    <form action="script_disc_ajout.php" method="post">
+    <form action="script_disc_modif.php" method="post" enctype="multipart/form-data">
         <input hidden name="disc_id" id="disc_id_for_label" value="<?= $myDisc->disc_id ?>">
 
         <label for="titre_for_label">Titre</label>
         <input type="text" name="titre" id="titre_for_label" value="<?= $myDisc->disc_title ?>">
         <br><br>
         
-        <label for="artiste_id_for_label">Artiste</label>
-        <select name="artiste_id" id="artiste_id_for_label">
+        <label for="artist_id_for_label">Artiste</label>
+        <select name="artist_id" id="a">
             <option value="<?=$myDisc->artist_id ?>"><?= $myDisc->artist_name ?></option>
             <?php
                 foreach ($myArtist as $artiste)
                 {
-                    if ($artiste->artist_id == $myDisc->artist_id) {
+                    if ($artist->artist_id == $myDisc->artist_id) {
                         continue;
                     }
                     else {
@@ -75,7 +77,7 @@
         <br><br>
         
         <label for="pochette_for_label">Pochette</label>
-        <input type="file" name="pochette" id="id_for_label" value="$myDisc->disc_picture">
+        <input type="file" name="pochette" id="id_for_label">
         <br><br>
 
         <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $myDisc->disc_picture ?>"
@@ -90,7 +92,7 @@
     
     </form>
     
-    <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
+    <a href="javascript:history.go(-1)" onclick='window.location.reload(true)'><button type="back">Retour</button></a>
     <?php include('../structure/footer.php'); ?> 
 </body>
 </html>

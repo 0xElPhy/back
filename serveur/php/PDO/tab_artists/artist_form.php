@@ -19,6 +19,7 @@
 <body>
 
     <?php include('../structure/header.php'); ?>
+    <?php include('../structure/nav.php'); ?>
 
     <h1>Fiche artiste n°<?= $myArtist->artist_id; ?></h1>
 

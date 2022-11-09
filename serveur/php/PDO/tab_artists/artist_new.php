@@ -9,6 +9,7 @@
 <body>
 
     <?php include('../structure/header.php'); ?>
+    <?php include('../structure/nav.php'); ?>
 
     <h1>Saisie d'un nouvel artiste</h1>
 

@@ -18,6 +18,7 @@
 <body>
     <!-- Chargement du header -->
     <?php include('../structure/header.php'); ?> 
+    <?php include('../structure/nav.php'); ?>
 
     <h1>Le formulaire d'ajout</h1>
 

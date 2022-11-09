@@ -21,6 +21,7 @@
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
+    <?php include('../structure/nav.php'); ?>
 
     <br>
     <table border=1>

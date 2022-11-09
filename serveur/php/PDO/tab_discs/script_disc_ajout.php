@@ -48,12 +48,12 @@
         }
 
     // Récupération du Fichier de la pochette :
-        if (isset($_FILES['pochette']) && $_FILES['pochette'] != "") {
+        if (!empty($_FILES['pochette']) && $_FILES['pochette']['error'] == 0) {
             // On met les types autorisés dans un tableau (ici pour une image)
             $aMimeTypes = array("jpeg" => "image/jpeg", 
-                                 "png" => "image/png",
+                                "png"  => "image/png",
                                 "webp" => "image/webp",
-                                 "gif" => "image/gif");
+                                "gif"  => "image/gif");
 
             // On extrait le type du fichier via l'extension FILE_INFO 
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
@@ -62,10 +62,12 @@
 
             if (in_array($mimetype, $aMimeTypes)) {
                 // Le type est parmi ceux autorisés, donc OK, on va pouvoir  déplacer et renommer le fichier
-                $pochette = strtolower($titre).'.'.explode('/', $mimetype)[1];
-                $pochette = preg_replace('/\s+/', '_', $pochette);
+                $pochette = preg_replace('/\s+/', '_',strtolower($titre))
+                            .'_'
+                            .mt_rand(1000,9999)
+                            .'.'
+                            .explode('/', $mimetype)[1];
 
-                //var_dump(rename($_FILES['pochette']['name'], strlen($titre)));
                 move_uploaded_file($_FILES["pochette"]["tmp_name"], "../assets/img/disc_pictures/$pochette");
             } 
             else {
@@ -113,7 +115,6 @@
 
             // Lancement de la requête :
             $requete->execute();
-            
 
             // Libération de la requête (utile pour lancer d'autres requêtes par la suite) :
             $requete->closeCursor();

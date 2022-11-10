@@ -26,12 +26,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
     <title>Ajout</title>
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
     <?php include('../structure/nav.php'); ?>
 
+    <section class="container">
     <h1>Fiche Disque n°<?= $myDisc->disc_id ?></h1>
     <br>
     <br>
@@ -93,6 +95,8 @@
     </form>
     
     <a href="javascript:history.go(-1)" onclick='window.location.reload(true)'><button type="back">Retour</button></a>
+    </section>
+    
     <?php include('../structure/footer.php'); ?> 
 </body>
 </html>

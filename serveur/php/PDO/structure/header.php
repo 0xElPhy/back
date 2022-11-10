@@ -3,5 +3,6 @@
 </head>
 
 <header>
-        <h1>PHP Data Objects<h1>
+    <a class="onglet artistes" href="/back/serveur/php/PDO/index.php"><h1>Velvet Records<h1></a>
+    <h3>PHP Data Objects<h3>
 </header>

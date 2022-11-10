@@ -9,9 +9,41 @@ header {
 }
 
 header h1 {
+    text-align: center;
+
     font-family: adventureH;
+    font-weight: 500;
     font-size: 55px;
+
+    color: rgb(241, 241, 243);
+    letter-spacing: 0.3rem;
+
+    transition: transform 0.25s linear,
+                letter-spacing 0.25s linear;
+                
+    -webkit-transition: transform 0.25s linear,
+                        letter-spacing 0.25s linear;
+
+}
+
+header h1:hover {
+    transform: scale(1.35);
+    letter-spacing: 0.6rem;
+
+    cursor: pointer;
+}
+
+header h3 {
+    /* font-family: adventureH;
+    font-size: 25px; */
+
+    font-family: Inter, Arial;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
 
     color: rgb(241, 241, 243);
     text-align: center;
 }
+

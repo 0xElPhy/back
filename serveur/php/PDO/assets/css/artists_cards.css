@@ -1,0 +1,114 @@
+.allCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.card {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    height: 379px;
+    width: 300px;
+    border-radius: 10px;
+    transition: all 0.8s;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 70px 63px -60px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+}
+
+.border {
+    height: 369px;
+    width: 290px;
+    border-radius: 10px;
+    transition: all 1s;
+    position: relative;
+  }
+  
+.border:hover {
+    border: 1px solid white;
+}
+
+.card {
+    background: url('/back/serveur/php/PDO/assets/img/kendrick_lamar_1484.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    /*background-size: 300px;*/
+}
+    
+.card:hover {
+    background: url('/back/serveur/php/PDO/assets/img/kendrick_lamar_1484.jpg') left center no-repeat;
+    background-size: 600px;
+    cursor: pointer;
+
+    box-shadow: 0 20px 45px rgba(255, 0, 0, 0.4);
+}
+
+.id_2 {
+background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') center center no-repeat;
+background-size: 300px;
+}
+
+.id_2:hover {
+    background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') left center no-repeat;
+    background-size: 600px;
+}
+
+.id_3 {
+background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') center center no-repeat;
+background-size: 300px;
+}
+
+.id_3:hover {
+    background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') left center no-repeat;
+    background-size: 600px;
+}
+
+.id_8 {
+    background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') center center no-repeat;
+    background-size: 300px;
+    }
+
+.id_8:hover {
+    background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') left center no-repeat;
+}
+
+.card h2 {
+font-family: Arial, sans-serif;
+color: rgb(241, 241, 243);
+margin: 20px;
+opacity: 1;
+transition: all 1s;
+}
+
+.hover {
+opacity: 0;
+transition: all 1s;
+}
+
+.infos {
+position: absolute;
+height: 130px;
+top: 226px;
+width: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.card:hover h2 {
+    opacity: 0;
+}
+
+.card:hover .hover {
+    opacity: 0;
+}

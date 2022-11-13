@@ -1,17 +1,20 @@
 function artist_card_anim(evt, card_id) {
+  var nom_class  = "card id_" + card_id;
   var infos = document.getElementsByClassName("infos");
-  var card = document.getElementsByClassName("card");
+  var picture = document.getElementsByClassName("picture");
+  var card = document.getElementsByClassName("nom_class");
 
   for (var i = 0; i < infos.length; i++) {
     infos[i].style.display = "none";
   }
 
-  for (var j = 0; j < infos.length; j++) {
-    infos[j].className = infos[j].className.replace(" active", "");
+  for (var j = 0; j < picture.length; j++) {
+    picture[j].className = picture[j].className.replace(" active", "");
   }
 
   document.getElementById(card_id).style.display = "flex";
   evt.currentTarget.className += " active";
+  //card.currentTarget.className += " active";
 }
 
 function openTab(container) {

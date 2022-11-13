@@ -9,7 +9,9 @@
 .card {
     margin-top: 25px;
     margin-bottom: 25px;
+}
 
+.picture {
     height: 379px;
     width: 300px;
     border-radius: 10px;
@@ -36,7 +38,7 @@
     border: 1px solid white;
 }
 
-.card {
+.picture {
     background: url('/back/serveur/php/PDO/assets/img/kendrick_lamar_1484.jpg');
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -44,7 +46,7 @@
     /*background-size: 300px;*/
 }
     
-.card:hover {
+.picture:hover {
     background: url('/back/serveur/php/PDO/assets/img/kendrick_lamar_1484.jpg') left center no-repeat;
     background-size: 600px;
     cursor: pointer;
@@ -52,35 +54,25 @@
     box-shadow: 0 20px 45px rgba(255, 0, 0, 0.4);
 }
 
-.id_2 {
+.picture .id_2 {
 background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') center center no-repeat;
 background-size: 300px;
 }
 
-.id_2:hover {
+.picture .id_2:hover {
     background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') left center no-repeat;
     background-size: 600px;
 }
 
-.id_3 {
+.picture .id_3 {
 background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') center center no-repeat;
 background-size: 300px;
 }
 
-.id_3:hover {
+.picture .id_3:hover {
     background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') left center no-repeat;
     background-size: 600px;
 }
-
-/*.id_8 {
-    background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') center center no-repeat;
-    background-size: 300px;
-    }
-
-.id_8:hover {
-    background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') center top no-repeat;
-    background-size: 600px;
-}*/
 
 .card h2 {
 font-family: Arial, sans-serif;

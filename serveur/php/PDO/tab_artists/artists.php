@@ -35,11 +35,13 @@
 
         <section class="sub_container allCards">
             <?php foreach ($tableau as $artist): ?>
-
-                <div class="card id_<?= $artist->artist_id ?>" onclick="artist_card_anim(event, <?= $artist->artist_id ?>)">
-                                                          <!-- onclick="location.href='artist_detail.php?id=</?= $artist->artist_id ?>'" -->
-                    <div class="border">
-                        <h2><?= $artist->artist_name ?></h2>
+                
+                <div class="card id_<?= $artist->artist_id ?>">
+                    <div class="picture id_<?= $artist->artist_id ?>" onclick="artist_card_anim(event, <?= $artist->artist_id ?>)">
+                                    <!-- onclick="location.href='artist_detail.php?id=</?= $artist->artist_id ?>'" -->
+                        <div class="border">
+                            <h2><?= $artist->artist_name ?></h2>
+                        </div>
                     </div>
 
                     <div class="infos" id="<?= $artist->artist_id ?>">

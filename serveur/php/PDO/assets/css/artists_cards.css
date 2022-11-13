@@ -72,43 +72,42 @@ background-size: 300px;
     background-size: 600px;
 }
 
-.id_8 {
+/*.id_8 {
     background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') center center no-repeat;
     background-size: 300px;
     }
 
 .id_8:hover {
-    background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') left center no-repeat;
-}
+    background: url('/back/serveur/php/PDO/assets/img/bob_dylan_6791.jpeg') center top no-repeat;
+    background-size: 600px;
+}*/
 
 .card h2 {
 font-family: Arial, sans-serif;
 color: rgb(241, 241, 243);
 margin: 20px;
 opacity: 1;
-transition: all 1s;
+transition: all 0.5s linear;
 }
 
-.hover {
+/*.liste {
 opacity: 0;
 transition: all 1s;
-}
+}*/
 
 .infos {
 position: absolute;
 height: 130px;
 top: 226px;
 width: 50px;
-display: flex;
+display : none;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
 }
 
 .card:hover h2 {
-    opacity: 0;
-}
-
-.card:hover .hover {
-    opacity: 0;
+    opacity: 0.5;
+    /*writing-mode: vertical-rl;
+    text-orientation: use-glyph-orientation;*/
 }

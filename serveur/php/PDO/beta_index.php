@@ -47,7 +47,7 @@
             <h2>Artistes</h2>
         </a>
 
-        <a class="onglet artistes" href="#discs" onclick="openTab('disques')">
+        <a class="onglet disques" href="#discs" onclick="openTab('disques')">
             <h2>Disques</h2>
         </a>
     </nav>

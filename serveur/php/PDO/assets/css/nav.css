@@ -44,10 +44,6 @@ nav .disques h2:hover {
     cursor: pointer;
 }
 
-nav h2:focus {
-    background-color:yellow;   
-}
-
 @media screen and (max-width: 640px) {
     nav {
         display: flex;

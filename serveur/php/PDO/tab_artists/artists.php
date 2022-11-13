@@ -36,17 +36,19 @@
         <section class="sub_container allCards">
             <?php foreach ($tableau as $artist): ?>
 
-                <div class="card id_<?= $artist->artist_id ?>" onclick="location.href='artist_detail.php?id=<?= $artist->artist_id ?>'">
+                <div class="card id_<?= $artist->artist_id ?>" onclick="artist_card_anim(event, <?= $artist->artist_id ?>)">
+                                                          <!-- onclick="location.href='artist_detail.php?id=</?= $artist->artist_id ?>'" -->
                     <div class="border">
                         <h2><?= $artist->artist_name ?></h2>
-                        <div class="infos">
-                            <i class="hover id">
-                                <?= (($artist->artist_id) < 10) ? "0".$artist->artist_id : $artist->artist_id; ?>
-                            </i>
-                            <a href="artist_detail.php?id=<?= $artist->artist_id ?>">
-                                <i class="hover details">Détails</i>
-                            </a>
-                        </div>
+                    </div>
+
+                    <div class="infos" id="<?= $artist->artist_id ?>">
+                        <i class="liste id">
+                            <?= (($artist->artist_id) < 10) ? "0".$artist->artist_id : $artist->artist_id; ?>
+                        </i>
+                        <a href="artist_detail.php?id=<?= $artist->artist_id ?>">
+                            <i class="liste details">Détails</i>
+                        </a>
                     </div>
                 </div>
 
@@ -64,7 +66,7 @@
                         <a href="artist_detail.php?id=</?= $artist->artist_id ?>">Détail</a>
                 </div>
             </div>
-        </?php endforeach; ?> -->!
+        </?php endforeach; ?> -->
 
         <!-- <table border=1>
             <tr>
@@ -87,11 +89,10 @@
             </?php endforeach; ?>
 
         </table> -->
-        
-        <br>
-        <a href="artist_new.php"><input value="Ajouter artiste" type="button"></a>
     </section>
 
     <?php include('../structure/footer.php'); ?>
+
+    <script src="/back/serveur/php/PDO/assets/javascript/scripts.js"></script>
 </body>
 </html>

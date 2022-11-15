@@ -7,21 +7,22 @@ USE record;
 CREATE TABLE artist (
 	artist_id		INT PRIMARY KEY AUTO_INCREMENT,
 	artist_name		VARCHAR(255),
-	artist_url		VARCHAR(255)
+	artist_url		VARCHAR(255),
+	artist_picture	VARCHAR(255)
 );
 
-INSERT INTO artist (artist_id, artist_name) VALUES
-(1, 'Neil Young'),
-(2, 'YES'),
-(3, 'Rolling Stones'),
-(4, 'Queens of the Stone Age'),
-(5, 'Serge Gainsbourg'),
-(6, 'AC/DC'),
-(7, 'Marillion'),
-(8, 'Bob Dylan'),
-(9, 'Fleshtones'),
-(10, 'The Clash'),
-(11, 'Kendrick Lamar');
+INSERT INTO artist (artist_id, artist_name, artist_url, artist_picture) VALUES
+(1, 'Neil Young',"https://neilyoung.warnerrecords.com/","neil_young_8471.jpeg"),
+(2, 'YES', 'https://www.yesworld.com/', 'yes_5341.jpeg'),
+(3, 'The Rolling Stones', 'https://rollingstones.com/', 'the_rolling_stones_1973.jpeg'),
+(4, 'Queens of the Stone Age', 'https://www.qotsa.com/', 'queen_of_the_stone_age_3268.jpeg'),
+(5, 'Serge Gainsbourg', 'https://www.universalmusic.fr/artistes/20000103696', 'serge_gainsbourg_7619.jpeg'),
+(6, 'AC/DC', 'https://www.acdc.com/', 'ac-dc_6666.jpeg'),
+(7, 'Marillion', 'https://www.marillion.com/', 'marillion_8320.jpeg'),
+(8, 'Bob Dylan', 'https://www.bobdylan.com/', 'bob_dylan_6791.jpeg'),
+(9, 'The Fleshtones', null,'the_fleshtones_9857.jpeg'),
+(10, 'The Clash', 'https://www.theclash.com/', 'the_clash_2917.jpeg'),
+(11, 'Kendrick Lamar', 'https://oklama.com/', 'kendrick_lamar_1484.jpeg');
 
 
 CREATE TABLE disc (
@@ -52,7 +53,6 @@ INSERT INTO disc (disc_id, disc_title, disc_year, disc_picture, disc_label, disc
 	(12, 'Exile on main street', 1972, 'Exile on main street.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 1),
 	(13, 'London Calling', 1971, 'London Calling.jpeg', 'CBS', 'Punk, New Wave', 33.00, 10),
 	(14, 'Beggars Banquet', 1968, 'Beggars Banquet.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 1),
-	(15, 'Laboratory of sound', 1995, 'Laboratory of sound.jpeg', 'Rebel Rec.', 'Rock', 33.00, 9);
-;
-
-
+	(15, 'Laboratory of sound', 1995, 'Laboratory of sound.jpeg', 'Rebel Rec.', 'Rock', 33.00, 9),
+	(16, 'Damn', 2017, 'damn_1953.jpeg', 'Top Dawg, Aftermath et Interscope', 'Rap', 29.99, 11),
+	(17, 'Mr. Morale & the Big Steppers', 2022, 'mr._morale_&_the_big_steppers_3709.jpeg', 'PGLang, Top Dawg, Aftermath et Interscope', 'Hip-hop alternatif, rap conscient, jazz rap', 44.99, 11);

@@ -44,7 +44,7 @@
             <br><br>
 
             <input type="reset" value="Annuler">
-            <input type="submit" value="Modifier">
+            <input type="submit" value="Valider">
 
         </form>
     </section>

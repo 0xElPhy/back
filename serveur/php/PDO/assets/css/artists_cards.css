@@ -1,24 +1,25 @@
 .allCards {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     height: fit-content;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .card {
     margin-top: 25px;
     margin-bottom: 25px;
-}
 
-.picture {
     height: 379px;
     width: 300px;
     border-radius: 10px;
     transition: all 0.8s;
     overflow: hidden;
     background: black;
-    box-shadow: 0 70px 63px -60px #000000;
+    box-shadow: 0 70px 63px -60px #111;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,50 +27,54 @@
     border: none;
 }
 
-.border {
+.border, .active .mask {
     height: 369px;
     width: 290px;
     border-radius: 10px;
-    transition: all 1s;
     position: relative;
   }
-  
-.border:hover {
-    border: 1px solid white;
-}
 
-.picture {
-    background: url('/back/serveur/php/PDO/assets/img/kendrick_lamar_1484.jpg');
+.card {
+    background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center center;
-    /*background-size: 300px;*/
+}
+
+.active {
+    box-shadow: 0 20px 45px rgba(0, 217, 255, 0.4);
+    background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg') left center no-repeat;
+    background-size: 600px;
+}
+
+.active:hover {
+    box-shadow: 0 20px 45px rgba(238, 255, 0, 0.4);
 }
     
-.picture:hover {
-    background: url('/back/serveur/php/PDO/assets/img/kendrick_lamar_1484.jpg') left center no-repeat;
+.card:hover {
+    background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg') left center no-repeat;
     background-size: 600px;
     cursor: pointer;
-
-    box-shadow: 0 20px 45px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 20px 45px rgba(156,85,156,0.4);
+    /* rgba(255, 0, 0, 0.4) */
 }
 
-.picture .id_2 {
+.card .id_2 {
 background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') center center no-repeat;
 background-size: 300px;
 }
 
-.picture .id_2:hover {
+.card .id_2:hover {
     background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') left center no-repeat;
     background-size: 600px;
 }
 
-.picture .id_3 {
+.card .id_3 {
 background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') center center no-repeat;
 background-size: 300px;
 }
 
-.picture .id_3:hover {
+.card .id_3:hover {
     background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') left center no-repeat;
     background-size: 600px;
 }
@@ -78,28 +83,75 @@ background-size: 300px;
 font-family: Arial, sans-serif;
 color: rgb(241, 241, 243);
 margin: 20px;
-opacity: 1;
-transition: all 0.5s linear;
+opacity: 0.7;
+text-shadow: 2px 2px #333;
+transition: all 0.8s;
+position: absolute;
+z-index: 10;
 }
 
-/*.liste {
-opacity: 0;
-transition: all 1s;
-}*/
+
+.active .mask {
+    background-color: rgb(27, 32, 48);
+    opacity: 0.75;
+    animation-name: maskUp;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
 
 .infos {
-position: absolute;
-height: 130px;
-top: 226px;
-width: 50px;
-display : none;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
+  position: absolute;
+  padding-left: 4px;
+  height: 130px;
+  top: 226px;
+  width: 280px;
+  display : none;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  transition: all 0.8s;
+
+  -webkit-animation-name: maskUp;
+  -webkit-animation-duration: 1.4s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
 }
 
+.liste {
+  text-shadow: -1px 1px black;
+} 
+
 .card:hover h2 {
-    opacity: 0.5;
-    /*writing-mode: vertical-rl;
-    text-orientation: use-glyph-orientation;*/
+  opacity: 1;
+  /*writing-mode: vertical-rl;
+  text-orientation: use-glyph-orientation;*/
+}
+
+.active h2 {
+  opacity: 1;
+}
+
+.mask .boutons {
+
+}
+
+@-webkit-keyframes maskUp {
+    from {
+      transform: translate(0%,100%);
+    }
+    to {
+      transform: translate(0%,0%);
+    }
+  }
+
+@-webkit-keyframes maskDown {
+  from {
+    transform: translate(0%,0%);
+  }
+  to {
+    transform: translate(0%,100%);
+  }
 }

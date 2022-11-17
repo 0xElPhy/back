@@ -1,0 +1,79 @@
+.groupe {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+    width: 100%;
+    min-width: fit-content;
+  }
+  
+  .champs {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: rgb(218, 244, 237);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .champs::placeholder {
+    color: transparent;
+  }
+  
+  .champs:placeholder-shown ~ .label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: rgba(218, 244, 237, 0.443);
+    pointer-events: none;
+  }
+  
+  .champs[readwrite]:focus {
+    padding-bottom: 6px;
+
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+  }
+  
+  .champs[readwrite]:focus ~ .label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #38caef;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .champs:required, .champs:invalid {
+    box-shadow: none;
+  }
+
+@media screen and (max-width: 960px) {
+  .formulaire {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+  }
+}
+  
+@media screen and (max-width: 640px) {
+  .card {
+      width: 275px;
+      height: 275px;
+  }
+}

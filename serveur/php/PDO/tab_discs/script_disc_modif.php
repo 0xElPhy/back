@@ -14,7 +14,6 @@
             // On met les types autorisés dans un tableau (ici pour une image)
             $aMimeTypes = array("jpeg" => "image/jpeg", 
                                 "png"  => "image/png",
-                                "webp" => "image/webp",
                                 "gif"  => "image/gif");
 
             // On extrait le type du fichier via l'extension FILE_INFO 

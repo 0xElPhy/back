@@ -1,13 +1,51 @@
 <html>
   <head>
     <title> QUICK CSS BUTTON </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/discs_cards.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
 
 </head>
 <body>
-  <div class="wrap">
-    <button class="button">Submit</button>
-    <button class="button">Valider</button>
+  <form class="form__group field">
+    <input required="" placeholder="Name" class="form__field" type="input">
+    <label class="form__label" for="name">Name</label>
   </div>
+
+
+  <form>
+    <input placeholder="Titre" class="titre__field" type="text" readonly>
+    <label class="titre__label" for="name">Titre</label>
+    <label>Titre</label>
+    <input value="<?= $myDisc->disc_title ?>" readonly>
+    <br><br>
+    
+    <label>Artiste</label>
+    <input value="<?= $myDisc->artist_name ?>" readonly>
+    <br><br>
+    
+    <label>Année</label>
+    <input value="<?= $myDisc->disc_year ?>" readonly>
+    <br><br>
+    
+    <label>Genre</label>
+    <input value="<?= $myDisc->disc_genre ?>" readonly>
+    <br><br>
+    
+    <label>Label</label>
+    <input value="<?= $myDisc->disc_label ?>" readonly>
+    <br><br>
+    
+    <label>Prix</label>
+    <input value="<?= $myDisc->disc_price ?>" readonly>
+    <br><br>
+    
+    <label>Pochette</label>
+    <br>
+    <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $myDisc->disc_picture ?>"
+        title="<?= $myDisc->disc_title ?>"
+        alt="img pochette <?= $myDisc->disc_picture ?>"
+        width="400"
+        height="400">
+</form>
 </body>
 </html>

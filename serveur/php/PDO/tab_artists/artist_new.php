@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
-    <title>PDO - Ajout</title>
+    <title>Ajouter - Artiste</title>
 </head>
 <body>
     <?php include('../structure/header.php'); ?>

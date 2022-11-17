@@ -4,9 +4,7 @@
 
     $requete = $db -> query("SELECT * FROM disc JOIN artist ON artist.artist_id = disc.artist_id ORDER BY RAND()");
     $liste = $requete -> fetchAll(PDO::FETCH_OBJ);
-    
     $requete -> closeCursor();
-    
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
-    <title>Page Disques</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/discs_cards.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
+    <title>Disques</title>
 </head>
 <body>
 
@@ -24,39 +24,32 @@
     <?php include('../structure/nav.php'); ?>
 
     <section class="container">
-        <h1>Liste des disques (<?php echo "en cours" ?>)</h1>
-
-        <a href="disc_new.php"><button>Ajouter Disque</button></a>
-
-        <table border="1">
+        <section class="sub_container debut">
+            <h1>Notre Discographie</h1>
+            <div class="ajouter">
+                <span>Nombre de disques répertoriés : <?php echo count($liste) ?></span>
+                <a href="disc_new.php"><button>Ajouter un disque</button></a>
+            </div>
+        </section>
+        
+        <section class="sub_container allCards">
             <?php foreach ($liste as $disque): ?>
-                <tr>
-                    <td>
-                        <a href="disc_details.php?id=<?= $disque->disc_id ?>">
-                            <img src="/back/serveur/php/PDO/assets/img/disc_pictures/<?= $disque->disc_picture ?>"
-                            title="<?=$disque->disc_title?>"
-                            alt="<?=$disque->disc_picture?>"
-                            width="200" height="200">
-                        </a>
-                    </td>
-                    <td><span><b><?= $disque->disc_title ?></b></span>
-                        <br>
-                        <span><b><a href="/back/serveur/php/PDO/tab_artists/artist_detail.php?id=<?= $disque->artist_id ?>"><?= $disque->artist_name ?></a></b><span>
-                        <br>
-                        <span><b>Label : </b><?= $disque->disc_label ?></span>
-                        <br>
-                        <span><b>Year : </b><?= $disque->disc_year ?></span>
-                        <br>
-                        <span><b>Genre : </b><?= $disque->disc_genre ?></span>
-                        <br>
-                        <br>
-                        <i>Cliquez sur la pochette<br>pour avoir les détails</i>
-                    </td>
-                </tr>
+                <div class="card"
+                     style="background: url('/back/serveur/php/PDO/assets/img/disc_pictures/<?php echo $disque->disc_picture ?>');
+                            background-repeat: no-repeat;
+                            background-size: 100% auto;
+                            background-position: center top;">
+                    <h2><?= $disque->artist_name ?></h2>
+                    <h1><?= $disque->disc_title ?></h1>
+                    <div class="infos">
+                        <span class="label">Label : <?= $disque->disc_label ?></span>
+                        <span class="annee">Année : <?= $disque->disc_year ?></span>
+                        <span class="genre">Genre : <?= $disque->disc_genre ?></span>
+                        <a class="details"href="disc_details.php?id=<?= $disque->disc_id ?>"><button>Détails</button></a>
+                    </div>
+                </div>
             <?php endforeach; ?>
-        </table>
-    </section>
-
+        </section>
     <?php include('../structure/footer.php'); ?> 
 </body>
 </html>

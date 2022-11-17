@@ -7,6 +7,8 @@
 
     margin-top: 25px;
     margin-bottom: 25px;
+
+    gap: 0px 20px;
 }
 
 .card {
@@ -45,10 +47,6 @@
     box-shadow: 0 20px 45px rgba(0, 217, 255, 0.4);
     background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg') left center no-repeat;
     background-size: 600px;
-}
-
-.active:hover {
-    box-shadow: 0 20px 45px rgba(238, 255, 0, 0.4);
 }
     
 .card:hover {
@@ -132,10 +130,6 @@ z-index: 10;
 
 .active h2 {
   opacity: 1;
-}
-
-.mask .boutons {
-
 }
 
 @-webkit-keyframes maskUp {

@@ -35,7 +35,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
-    <title>Velvet Records - Artistes</title>
+    <title>Détails - <?= $myArtist->artist_name ?></title>
 </head>
 
 <body>
@@ -66,10 +66,11 @@
             }
         ?>
         <br><br>
-        <a href="artist_form.php?id=<?= $myArtist->artist_id ?>"><button>Modifier</button></a>
-        <a href="script_artist_delete.php?id=<?= $myArtist->artist_id ?>"><button>Supprimer</button></a>
+        <a class="Modifier" href="artist_form.php?id=<?= $myArtist->artist_id ?>"><button>Modifier</button></a>
+        <a class="supprimer" href="script_artist_delete.php?id=<?= $myArtist->artist_id ?>"><button>Supprimer</button></a>
     </section>
     
     <?php include('../structure/footer.php'); ?>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>

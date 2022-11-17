@@ -20,14 +20,14 @@ body {
 
 a {
   text-decoration: none;
-  color: rgba(111,179,194,255);
+  color: rgba(111,179,194,1);
 
   transition: color 0.125s linear;
   -webkit-transition: color 0.1s linear;
 }
 
 a:hover{
-  color: rgba(156,85,156,255);
+  color: rgba(156,85,156,1);
 }
 
 .container {
@@ -36,6 +36,15 @@ a:hover{
   box-sizing: border-box;
   margin-right: auto;
   display: block;
+}
+
+.debut h1{
+  font-size: 25px;
+}
+
+.sub_container {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 *, ::before, ::after {
@@ -61,6 +70,17 @@ a:hover{
     padding-left: 57px;
     padding-right: 57px;
   }
+  .debut {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .debut .ajouter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 640px) {
@@ -68,6 +88,7 @@ a:hover{
     padding-left: 32px;
     padding-right: 32px;
   }
+
 }
 
 @media screen and (min-width: 0px) {

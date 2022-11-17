@@ -11,7 +11,7 @@
     $url = (isset($_POST['url']) && $_POST['url'] != "") ? $_POST['url'] : Null;
 
     // En cas d'erreur, on renvoie vers le formulaire
-    if ($nom == Null || $url == Null) {
+    if ($nom == Null) {
         header("Location: artist_new.php");
         exit;
     }

@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/disc_details.css">
 
 
-    <title>Détails - <?= $myDisc->disc_title ?></title>
+    <title>Fiche - <?= $myDisc->disc_title ?></title>
 </head>
 <body>
     <?php include('../structure/header.php'); ?>
@@ -41,7 +41,7 @@
     
     <section class="container">
         <section class="sub_container debut">
-            <h1>Détails - <?= $myDisc->disc_title ?></h1>
+            <h1>Fiche disque n° <?= $myDisc->disc_id ?> - <?= $myDisc->disc_title ?></h1>
             <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
         </section>
 

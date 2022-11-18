@@ -19,6 +19,7 @@ body {
 }
 
 a {
+  width: fit-content;
   text-decoration: none;
   color: rgba(111,179,194,1);
 

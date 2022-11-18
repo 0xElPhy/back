@@ -23,6 +23,7 @@ INSERT INTO artist (artist_id, artist_name, artist_url, artist_picture) VALUES
 (9, 'The Fleshtones', null,'the_fleshtones_9857.jpeg'),
 (10, 'The Clash', 'https://www.theclash.com/', 'the_clash_2917.jpeg'),
 (11, 'Kendrick Lamar', 'https://oklama.com/', 'kendrick_lamar_1484.jpeg');
+(12, 'Vald', null, 'vald_7290.jpeg');
 
 
 CREATE TABLE disc (
@@ -46,13 +47,14 @@ INSERT INTO disc (disc_id, disc_title, disc_year, disc_picture, disc_label, disc
 	(5, 'After the Gold Rush', 1970, 'After the Gold Rush.jpeg', 'Reprise Records', 'Country Rock', 20.00, 1),
 	(6, 'Broken Arrow', 1996, 'Broken Arrow.jpeg', 'Reprise Records', ' Country Rock, Classic Rock', 15.00, 1),
 	(7, 'Highway To Hell', 1979, 'Highway To Hell.jpeg', 'Atlantic', 'Hard Rock', 15.00, 6),
-	(8, 'Drama', 1980, 'Drama.jpeg', 'Atlantic', 'Prog', 15.00, 2),
-	(9, 'Year of the Horse', 1997, 'Year of the Horse.jpeg', 'Reprise Records', 'Country Rock, Classic Rock', 7.50, 1),
-	(10, 'Ragged Glory', 1990, 'Ragged Glory.jpeg', 'Reprise Records', 'Country Rock, Grunge', 11.00, 1),
-	(11, 'Rust Never Sleeps', 1979, 'Rust Never Sleeps.jpeg', 'Reprise Records', 'Classic Rock, Arena Rock', 15.00, 1),
-	(12, 'Exile on main street', 1972, 'Exile on main street.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 3),
-	(13, 'London Calling', 1971, 'London Calling.jpeg', 'CBS', 'Punk, New Wave', 33.00, 10),
-	(14, 'Beggars Banquet', 1968, 'Beggars Banquet.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 3),
-	(15, 'Laboratory of sound', 1995, 'Laboratory of sound.jpeg', 'Rebel Rec.', 'Rock', 33.00, 9),
-	(16, 'Damn', 2017, 'damn_1953.jpeg', 'Top Dawg, Aftermath et Interscope', 'Rap', 29.99, 11),
+	(8, 'Damn', 2017, 'damn_1953.jpeg', 'Top Dawg, Aftermath et Interscope', 'Rap', 29.99, 11),
+	(9, 'Drama', 1980, 'Drama.jpeg', 'Atlantic', 'Prog', 15.00, 2),
+	(10, 'Year of the Horse', 1997, 'Year of the Horse.jpeg', 'Reprise Records', 'Country Rock, Classic Rock', 7.50, 1),
+	(11, 'Ragged Glory', 1990, 'Ragged Glory.jpeg', 'Reprise Records', 'Country Rock, Grunge', 11.00, 1),
+	(12, 'Rust Never Sleeps', 1979, 'Rust Never Sleeps.jpeg', 'Reprise Records', 'Classic Rock, Arena Rock', 15.00, 1),
+	(13, 'Exile on main street', 1972, 'Exile on main street.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 3),
+	(14, 'London Calling', 1971, 'London Calling.jpeg', 'CBS', 'Punk, New Wave', 33.00, 10),
+	(15, 'Beggars Banquet', 1968, 'Beggars Banquet.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 3),
+	(16, 'Laboratory of sound', 1995, 'Laboratory of sound.jpeg', 'Rebel Rec.', 'Rock', 33.00, 9),
 	(17, 'Mr. Morale & the Big Steppers', 2022, 'mr._morale_&_the_big_steppers_3709.jpeg', 'PGLang, Top Dawg, Aftermath et Interscope', 'Hip-hop alternatif, rap conscient, jazz rap', 44.99, 11);
+	(18, 'Xeu', 2022, 'xeu_3380.jpeg', 'Universal Music Division Capitol Music France', 'Rap', 26.99, 12);

@@ -45,7 +45,7 @@
 
     // Si OK: redirection vers la page artists.php
     header("Location: artists.php");
-
+    
     // Fermeture du script
     exit;
 ?>

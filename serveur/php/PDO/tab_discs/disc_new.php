@@ -22,7 +22,7 @@
     <?php include('../structure/nav.php'); ?>
 
     <section class="container">
-        <h1>Le formulaire d'ajout</h1>
+        <h1>Ajouter un vinyle</h1>
 
         <form action ="script_disc_ajout.php" method="post" enctype="multipart/form-data">
             <h2>Ajouter un vinyle</h2>

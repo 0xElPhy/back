@@ -5,6 +5,10 @@
     width: 100%;
     min-width: fit-content;
   }
+
+  option {
+    background-color: rgb(27, 32, 48);
+  }
   
   .champs {
     font-family: inherit;
@@ -39,11 +43,23 @@
     pointer-events: none;
   }
   
-  .champs[readwrite]:focus {
+  .champs[readwrite] {
     padding-bottom: 6px;
 
     border-width: 3px;
     border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+  }
+  
+  .champs[readwrite] ~ .label {
+    color: #38caef;
+  }
+
+  .champs[readwrite]:focus {
+    padding-bottom: 6px;
+
+    border-width: 3px;
+    border-image: linear-gradient(to right, rgba(156,85,156), #ef38e6f5);
     border-image-slice: 1;
   }
   
@@ -53,7 +69,7 @@
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #38caef;
+    color: #ef38e6f5;
     font-weight: 700;
   }
   

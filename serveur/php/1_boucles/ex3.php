@@ -39,7 +39,7 @@
                 return $table;
             }
 
-            echo table(12, 12);
+            echo table(12, 1);
         ?>
     </body>
 </html>

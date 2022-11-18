@@ -71,8 +71,8 @@
             } 
             else {
                 // Le type n'est pas autorisé, donc ERREUR
+                header("Location: disc_new.php");
                 echo "<script>alert('Type de fichier non autorisé')</script>";
-                echo "Type de fichier non autorisé";
                 exit;
             }
 
@@ -84,6 +84,7 @@
     // En cas d'erreur, on renvoie vers le formulaire
         if ($titre == Null || $artist_id == Null || $annee == Null || $genre == Null || $label == Null || $prix == Null || $pochette == Null) {
             header("Location: disc_new.php");
+            exit;
         }
 
     // Connexion à la BDD

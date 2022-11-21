@@ -16,7 +16,7 @@
     $myDisc = $requete->fetch(PDO::FETCH_OBJ);
         if ($myDisc == FALSE)  {
             $requete->closeCursor();
-            exit("Fiche disque N°<b>$id</b> inexistante ... ".'<a href="/back/serveur/php/PDO/onglets_discs/discs.php">Retour</a>');
+            exit("Fiche disque N°<b>$id</b> inexistante ... ".'<a href="/back/serveur/php/PDO/tab_discs/discs.php">Retour</a>');
         }
     $requete->closeCursor();
 ?>
@@ -30,7 +30,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/inputs.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/disc_details.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/forms.css">
 
 
     <title>Fiche - <?= $myDisc->disc_title ?></title>
@@ -84,7 +84,7 @@
                 </div>
             </section>
             <section class="pochette">
-                <div class="card"
+                <div class="card card_pochette"
                     style="background: url('/back/serveur/php/PDO/assets/img/disc_pictures/<?php echo $myDisc->disc_picture ?>');
                             background-repeat: no-repeat;
                             background-size: 100% auto;

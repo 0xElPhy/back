@@ -22,7 +22,7 @@
 
 } */
 
-.card {
+.card_pochette {
     margin: 50px;
     padding: 0.5rem;
 
@@ -43,9 +43,33 @@
     color: rgb(241, 241, 243);
 }
 
-.card:hover {
+.card_pochette:hover {
     transform: skewX(0deg);
     border: none;
+}
+
+.card_artiste {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    height: 379px;
+    width: 300px;
+    border-radius: 10px;
+    transition: all 0.8s;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 70px 63px -60px #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    box-shadow: 0 20px 45px rgba(156,85,156,0.4);
+}
+
+.card_artiste:hover {
+    cursor: pointer;
+    box-shadow: 0 20px 45px rgba(0, 217, 255, 0.4);
 }
 
 @media screen and (max-width: 960px) {
@@ -77,8 +101,13 @@
         width: 100%;
     }
 
-    .card {
-    width: 275px;
-    height: 275px;
+    .card_pochette {
+        width: 275px;
+        height: 275px;
+    }
+
+    .card_artiste {
+        height: 284.25px;
+        width: 225px;
     }
 }

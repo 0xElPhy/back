@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/inputs.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/disc_details.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/forms.css">
 
     <title>Modifier - <?= $myDisc->disc_title ?></title>
 </head>
@@ -57,19 +57,17 @@
                     <select class="champs artiste" name="artist_id" readwrite>
                         <option value="<?=$myDisc->artist_id ?>"><?= $myDisc->artist_name ?></option>
                         <?php
-                            foreach ($myArtist as $artiste)
+                            foreach ($myArtist as $artist)
                             {
                                 if ($artist->artist_id == $myDisc->artist_id) {
                                     continue;
                                 }
                                 else {
-                                    echo "<option value='$artiste->artist_id'> $artiste->artist_name </option>";
+                                    echo "<option value='$artist->artist_id'> $artist->artist_name </option>";
                                 }
                             }
                         ?>
                     </select>
-                    <!-- <input class="champs artiste" value="</?= $myDisc->artist_name ?>" 
-                        placeholder="Artiste" type="text" readonly> -->
                     <label class="label artiste" for="artiste">Artiste</label>
                 </div>
 
@@ -99,7 +97,7 @@
             </section>
 
             <section class="pochette">
-                <div class="card"
+                <div class="card card_pochette"
                     style="background: url('/back/serveur/php/PDO/assets/img/disc_pictures/<?php echo $myDisc->disc_picture ?>');
                            background-repeat: no-repeat;
                            background-size: 100% auto;

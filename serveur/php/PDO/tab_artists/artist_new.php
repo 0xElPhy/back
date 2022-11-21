@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/inputs.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/forms.css">
+
     <title>Ajouter - Artiste</title>
 </head>
 <body>
@@ -12,26 +16,35 @@
     <?php include('../structure/nav.php'); ?>
 
     <section class="container">
-        <h1>Saisie d'un nouvel artiste</h1>
+        <section class="sub_container debut">
+            <h1>Ajouter un artiste</h1>
+            <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
+        </section>
 
-        <br>
-        <br>
+        <form class="sub_container formulaire" id="artist_form" action="script_artist_ajout.php" method="post" enctype="multipart/form-data">
+            <section class="datas">
+                <div class="groupe g_nom">
+                    <input class="champs nom" name="nom"
+                        placeholder="Nom" type="text" readwrite>
+                    <label class="label nom" for="nom">Nom de l'artiste</label>
+                </div>
 
-        <form action ="script_artist_ajout.php" method="post">
+                <div class="groupe g_url">
+                    <input class="champs url" name="url"
+                        placeholder="Url" type="text" readwrite>
+                    <label class="label url" for="url">Site internet :</label>
+                </div>
 
-            <label for="nom_for_label">Nom de l'artiste :</label><br>
-            <input type="text" name="nom" id="nom_for_label">
-            <br><br>
-
-            <label for="url_for_label">Adresse site internet :</label><br>
-            <input type="text" name="url" id="url_for_label">
-            <br><br>
-
-            <input type="submit" value="Ajouter">
-
+                <div class="groupe g_image">
+                    <input class="champs image" type="file" name="image" readwrite>
+                    <label class="label image" for="image">Image Artiste</label>
+                </div>
+            </section>
         </form>
-        <br>
-        <a href="javascript:history.go(-1)"><button>Retour</button></a>
+
+        <section class="sub_container wrap">
+            <button class="valider" type="submit" form="artist_form">Ajouter</button>
+        </section>
     </section>
     
     <?php include('../structure/footer.php'); ?>

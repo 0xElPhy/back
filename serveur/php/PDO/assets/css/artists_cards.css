@@ -36,45 +36,13 @@
     position: relative;
   }
 
-.card {
-    background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center center;
-}
-
 .active {
     box-shadow: 0 20px 45px rgba(0, 217, 255, 0.4);
-    background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg') left center no-repeat;
-    background-size: 600px;
 }
     
 .card:hover {
-    background: url('/back/serveur/php/PDO/assets/img/artist_pictures/kendrick_lamar_1484.jpeg') left center no-repeat;
-    background-size: 600px;
     cursor: pointer;
     box-shadow: 0 20px 45px rgba(156,85,156,0.4);
-    /* rgba(255, 0, 0, 0.4) */
-}
-
-.card .id_2 {
-background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') center center no-repeat;
-background-size: 300px;
-}
-
-.card .id_2:hover {
-    background: url('https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg') left center no-repeat;
-    background-size: 600px;
-}
-
-.card .id_3 {
-background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') center center no-repeat;
-background-size: 300px;
-}
-
-.card .id_3:hover {
-    background: url('https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg') left center no-repeat;
-    background-size: 600px;
 }
 
 .card h2 {

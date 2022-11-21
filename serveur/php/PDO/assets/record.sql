@@ -22,7 +22,7 @@ INSERT INTO artist (artist_id, artist_name, artist_url, artist_picture) VALUES
 (8, 'Bob Dylan', 'https://www.bobdylan.com/', 'bob_dylan_6791.jpeg'),
 (9, 'The Fleshtones', null,'the_fleshtones_9857.jpeg'),
 (10, 'The Clash', 'https://www.theclash.com/', 'the_clash_2917.jpeg'),
-(11, 'Kendrick Lamar', 'https://oklama.com/', 'kendrick_lamar_1484.jpeg');
+(11, 'Kendrick Lamar', 'https://oklama.com/', 'kendrick_lamar_1484.jpeg'),
 (12, 'Vald', null, 'vald_7290.jpeg');
 
 
@@ -56,5 +56,5 @@ INSERT INTO disc (disc_id, disc_title, disc_year, disc_picture, disc_label, disc
 	(14, 'London Calling', 1971, 'London Calling.jpeg', 'CBS', 'Punk, New Wave', 33.00, 10),
 	(15, 'Beggars Banquet', 1968, 'Beggars Banquet.jpeg', 'Rolling Stones Records', 'Blues Rock, Classic Rock', 33.00, 3),
 	(16, 'Laboratory of sound', 1995, 'Laboratory of sound.jpeg', 'Rebel Rec.', 'Rock', 33.00, 9),
-	(17, 'Mr. Morale & the Big Steppers', 2022, 'mr._morale_&_the_big_steppers_3709.jpeg', 'PGLang, Top Dawg, Aftermath et Interscope', 'Hip-hop alternatif, rap conscient, jazz rap', 44.99, 11);
+	(17, 'Mr. Morale & the Big Steppers', 2022, 'mr._morale_&_the_big_steppers_3709.jpeg', 'PGLang, Top Dawg, Aftermath et Interscope', 'Hip-hop alternatif, rap conscient, jazz rap', 44.99, 11),
 	(18, 'Xeu', 2022, 'xeu_3380.jpeg', 'Universal Music Division Capitol Music France', 'Rap', 26.99, 12);

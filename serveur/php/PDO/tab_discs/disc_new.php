@@ -14,7 +14,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
-    <title>Ajouter - Disque</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/inputs.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/forms.css">
+    <title>Ajouter - Vinyle</title>
 </head>
 <body>
     <!-- Chargement du header -->
@@ -22,54 +25,67 @@
     <?php include('../structure/nav.php'); ?>
 
     <section class="container">
-        <h1>Ajouter un vinyle</h1>
+        <section class="sub_container debut">
+            <h1>Ajouter un vinyle</h1>
+            <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
+        </section>
 
-        <form action ="script_disc_ajout.php" method="post" enctype="multipart/form-data">
-            <h2>Ajouter un vinyle</h2>
+        <form class="sub_container formulaire" id="disc_form" action="script_disc_ajout.php" method="post" enctype="multipart/form-data">
+            <section class="datas">
+                <div class="groupe g_titre">
+                    <input class="champs titre" name="titre"
+                        placeholder="Titre" type="text" readwrite>
+                    <label class="label titre" for="titre">Titre</label>
+                </div>
 
-            <label for="titre_for_label">Titre</label><br>
-            <input type="text" name="titre" id="titre_for_label" placeholder="Entrez un titre">
-            <br><br>
+                <div class="groupe g_artiste">
+                    <select class="champs artiste" name="artist_id" readwrite>
+                        <option value="0">Sélectionnez un artiste</option>
+                        <?php
+                            foreach ($myArtist as $artiste)
+                            {
+                                echo "<option value='$artiste->artist_id'> $artiste->artist_name </option>";
+                            }
+                        ?>
+                    </select>
+                    <label class="label artiste" for="artiste">Artiste</label>
+                    <a href="/back/serveur/php/PDO/tab_artists/artist_new.php">Ajouter un artiste</a>
+                </div>
 
-            <label for="artiste_id_for_label">Artiste</label><br>
-            <select name="artist_id" id="artiste_id_for_label">
-                <option value="0">Sélectionnez un artiste</option>
-                <?php
-                    foreach ($myArtist as $artiste)
-                    {
-                        echo "<option value='$artiste->artist_id'> $artiste->artist_name </option>";
-                    }
-                ?>
-            </select>
+                <div class="groupe g_annee">
+                    <input class="champs annee" name="annee"
+                        placeholder="Année" type="text" readwrite>
+                    <label class="label annee" for="annee">Année</label>
+                </div>
 
-            <a href="/back/serveur/php/PDO/tab_artists/artist_new.php">Ajouter un artiste</a>
-            <br><br>
+                <div class="groupe g_genre">
+                    <input class="champs genre" name="genre"
+                        placeholder="Genre" type="text" readwrite>
+                    <label class="label genre" for="genre">Genre</label>
+                </div>
 
-            <label for="annee_for_label">Année</label><br>
-            <input type="text" name="annee" id="annee_for_label" placeholder="Entrez l'année de sortie">
-            <br><br>
+                <div class="groupe g_labelD">
+                    <input class="champs labelD" name="label"
+                        placeholder="Label" type="text" readwrite>
+                    <label class="label labelD" for="label">Label</label>
+                </div>
 
-            <label for="genre_for_label">Genre</label><br>
-            <input type="text" name="genre" id="genre_for_label" placeholder="Entrez un genre (Rock, Pop, Rap, Prog, ...)">
-            <br><br>
+                <div class="groupe g_prix">
+                    <input class="champs prix" name="prix"
+                        placeholder="Prix" type="text" readwrite>
+                    <label class="label prix" for="prix">Prix</label>
+                </div>
 
-            <label for="label_for_label">Label</label><br>
-            <input type="text" name="label" id="label_for_label" placeholder="Entrez le nom du label (Warner, TDE, EMI, pgLang, Universale, ...)">
-            <br><br>
-
-            <label for="prix_for_label">Prix</label><br>
-            <input type="text" name="prix" id="prix_for_label">
-            <br><br>
-
-            <label for="pochette_for_label">Image pochette</label><br>
-            <input type="file" name="pochette">
-            <br><br><br>
-
-            <input type="reset" value="Annuler">
-            <input type="submit" value="Ajouter">
+                <div class="groupe g_pochette">
+                    <input class="champs pochette" type="file" name="pochette" readwrite>
+                    <label class="label image" for="pochette">Pochette</label>
+                </div>
+            </section>
         </form>
-        <br>
-        <a href="javascript:history.go(-1)"><button>Retour</button></a>
+
+        <section class="sub_container wrap">
+            <button class="valider" type="submit" form="disc_form">Ajouter</button>
+        </section>
     </section>
     
     <!-- Chargement du footer -->

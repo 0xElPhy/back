@@ -71,13 +71,14 @@ z-index: 10;
   position: absolute;
   padding-left: 4px;
   height: 130px;
-  top: 226px;
+  bottom: 10px;
   width: 280px;
   display : none;
   flex-direction: column;
   /* align-items: center; */
-  justify-content: space-around;
+  justify-content: flex-end;
   transition: all 0.8s;
+  gap: 5px;
 
   -webkit-animation-name: maskUp;
   -webkit-animation-duration: 1.4s;
@@ -98,6 +99,9 @@ z-index: 10;
 
 .active h2 {
   opacity: 1;
+}
+button {
+  color: red;
 }
 
 @-webkit-keyframes maskUp {

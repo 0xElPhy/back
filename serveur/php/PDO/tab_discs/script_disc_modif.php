@@ -7,8 +7,14 @@
         $annee = (isset($_POST['annee']) && $_POST['annee'] != "") ? $_POST['annee'] : Null;
         $genre = (isset($_POST['genre']) && $_POST['genre'] != "") ? $_POST['genre'] : Null;
         $label = (isset($_POST['label']) && $_POST['label'] != "") ? $_POST['label'] : Null;
-        $prix = (isset($_POST['prix']) && $_POST['prix'] != "") ? $_POST['prix'] : Null;
-    
+        
+        if (isset($_POST['prix']) && $_POST['prix'] != "") {
+            $prix = str_replace(',', '.', $_POST['prix']);
+        }
+        else {
+            $prix = Null;
+        }
+
     // Récupération du Fichier de la pochette :
         if (!empty($_FILES['pochette']) && $_FILES['pochette']['error'] == 0) {
             // On met les types autorisés dans un tableau (ici pour une image)

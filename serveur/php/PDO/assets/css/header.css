@@ -10,6 +10,7 @@ header {
 
 header h1 {
     text-align: center;
+    margin: 50px;
 
     font-family: adventureH;
     font-weight: 500;

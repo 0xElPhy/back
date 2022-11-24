@@ -40,7 +40,7 @@
     <?php include('../structure/nav.php'); ?>
     
     <section class="container">
-        <section class="sub_container debut">
+        <section class="sub_container debut retour">
             <h1>Fiche disque n° <?= $myDisc->disc_id ?> - <?= $myDisc->disc_title ?></h1>
             <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
         </section>

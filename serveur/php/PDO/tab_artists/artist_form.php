@@ -26,7 +26,7 @@
     <?php include('../structure/nav.php'); ?>
 
     <section class="container">
-        <section class="sub_container debut">
+        <section class="sub_container debut retour">
             <h1>Fiche artiste n°<?= $myArtist->artist_id; ?></h1>
             <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
         </section>
@@ -45,13 +45,13 @@
                 <div class="groupe g_id">
                     <input class="champs id" value="<?= $myArtist->artist_id ?>"
                         type="text" name="id" readonly>
-                    <label class="label id" for="id">Numéro de l'artiste :</label>
+                    <label class="label id" for="id">Numéro</label>
                 </div>
 
                 <div class="groupe g_nom">
                     <input class="champs nom" name="nom" value="<?= $myArtist->artist_name ?>"
                         placeholder="Nom" type="text" readwrite>
-                    <label class="label nom" for="nom">Nom de l'artiste</label>
+                    <label class="label nom" for="nom">Nom</label>
                 </div>
 
                 <div class="groupe g_url">

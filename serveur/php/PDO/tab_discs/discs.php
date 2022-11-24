@@ -50,6 +50,8 @@
                 </div>
             <?php endforeach; ?>
         </section>
+    </section>
+    
     <?php include('../structure/footer.php'); ?> 
 </body>
 </html>

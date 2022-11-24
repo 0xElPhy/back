@@ -34,6 +34,6 @@
     }
 
     // Si OK: redirection vers la page artist_detail.php
-    header("Location: artist_detail.php?id=".$id);
+    header("Location: artists.php");
     exit;
 ?>

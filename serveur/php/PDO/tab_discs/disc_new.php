@@ -25,7 +25,7 @@
     <?php include('../structure/nav.php'); ?>
 
     <section class="container">
-        <section class="sub_container debut">
+        <section class="sub_container debut retour">
             <h1>Ajouter un vinyle</h1>
             <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
         </section>
@@ -56,6 +56,7 @@
                     <input class="champs annee" name="annee"
                         placeholder="Année" type="text" readwrite>
                     <label class="label annee" for="annee">Année</label>
+                    <small id="annee" class="form-annee" style="color: red">Année non-valide</small>
                 </div>
 
                 <div class="groupe g_genre">
@@ -90,5 +91,8 @@
     
     <!-- Chargement du footer -->
     <?php include('../structure/footer.php'); ?>
+
+    <script src="/back/serveur/php/PDO/assets/javascript/form_validation.js"></script>
+
 </body>
 </html>

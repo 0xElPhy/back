@@ -39,8 +39,10 @@ a:hover{
   display: block;
 }
 
-.debut h1{
+h1{
   font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .sub_container {
@@ -71,17 +73,20 @@ a:hover{
     padding-left: 57px;
     padding-right: 57px;
   }
-  .debut {
+
+  .retour {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
   }
 
-  .debut .ajouter{
+  .ajouter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
+
 }
 
 @media screen and (min-width: 640px) {

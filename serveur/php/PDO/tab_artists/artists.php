@@ -29,7 +29,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/pages_content.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/artists_cards.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/back/serveur/php/PDO/assets/css/buttons.css">
-
     <title>Artistes</title>
 </head>
 <body>
@@ -61,10 +60,15 @@
                             <span class="liste id">
                                 Fiche Artiste n° <?= (($artist->artist_id) < 10) ? "0".$artist->artist_id : $artist->artist_id; ?>
                             </span>
-                            <a href="artist_detail.php?id=<?= $artist->artist_id ?>">
+                            <span class="liste site">
+                                Site Internet : <a href="<?= $artist->artist_url ?>" target="_blank">
+                                <?= (isset($artist->artist_url)) ? parse_url($artist->artist_url)['host'] : ""; ?>
+                                </a>
+                            </span>
+                            <!-- <a href="artist_detail.php?id=</?= $artist->artist_id ?>">
                                 <span class="liste details">Détails</span>
-                            </a>
-                            <span class="liste discographie">Discographie :</span>
+                            </a> -->
+                            <span class="liste discographie">Discographie :
                             <ul class="liste disque">
                                 <?php
                                     $artist_id = $artist->artist_id;
@@ -89,6 +93,7 @@
                                     }
                                 ?>
                             </ul>
+                            </span>
                             <div class="wrap">
                                 <a href="artist_form.php?id=<?= $artist->artist_id ?>"><button class="modifier">Modifier</button></a>
                                 <a href="script_artist_delete.php?id=<?= $artist->artist_id ?>"><button class="supprimer">Supprimer</button></a>

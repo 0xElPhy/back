@@ -41,7 +41,7 @@
 
     // Récupération du Prix :
         if (isset($_POST['prix']) && $_POST['prix'] != "") {
-            $prix = $_POST['prix'];
+            $prix = str_replace(',', '.', $_POST['prix']);
         }
         else {
             $prix = Null;

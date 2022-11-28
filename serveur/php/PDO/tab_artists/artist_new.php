@@ -25,18 +25,19 @@
             <section class="datas">
                 <div class="groupe g_nom">
                     <input class="champs nom" name="nom"
-                        placeholder="Nom" type="text" readwrite>
+                        placeholder="Nom" type="text" required readwrite>
                     <label class="label nom" for="nom">Nom de l'artiste</label>
                 </div>
 
                 <div class="groupe g_url">
                     <input class="champs url" name="url"
-                        placeholder="Url" type="text" readwrite>
+                        placeholder="Url" type="text" required readwrite>
                     <label class="label url" for="url">Site internet :</label>
+                    <small id="url" class="form-url">Url du site non-valide</small>
                 </div>
 
                 <div class="groupe g_image">
-                    <input class="champs image" type="file" name="image" readwrite>
+                    <input class="champs image" type="file" name="image" required readwrite>
                     <label class="label image" for="image">Image Artiste</label>
                 </div>
             </section>
@@ -48,5 +49,6 @@
     </section>
     
     <?php include('../structure/footer.php'); ?>
+    <script src="/back/serveur/php/PDO/assets/javascript/form_validation.js"></script>
 </body>
 </html>

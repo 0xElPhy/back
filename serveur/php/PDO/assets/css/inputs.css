@@ -26,10 +26,6 @@
   .champs::placeholder {
     color: transparent;
   }
-
-    /* .champs[readwrite]:focus::placeholder {
-    color: white;
-  } */
   
   .champs:placeholder-shown ~ .label {
     font-size: 17px;
@@ -46,7 +42,7 @@
     color: rgba(218, 244, 237, 0.443);
     pointer-events: none;
   }
-  
+
   .champs[readwrite] {
     padding-bottom: 6px;
 
@@ -80,6 +76,20 @@
   /* reset input */
   .champs:required, .champs:invalid {
     box-shadow: none;
+  }
+
+  small{
+    display: none;
+  }
+
+  .invalide,
+  .invalide ~ label,
+  .invalide ~ small{
+    color: red;
+  }
+
+  .invalide ~ small {
+    display: contents;
   }
   
 @media screen and (max-width: 960px) {

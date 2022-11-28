@@ -2,8 +2,8 @@ const inputs = document.querySelectorAll('input');
 
 const patterns = {
   annee: /^\d{4}$/,
-  url: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,
-  prix: /^\d+([,.]\d{1,2})?$/g
+  url: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i,
+  prix: /^\d+([,.]\d{1,2})?$/i
 };
 
 inputs.forEach((input) => {
@@ -22,8 +22,8 @@ function validate(field, regex) {
         return false;
       }
     } 
-    field.className = 'form-control valid';
+    field.className = 'champs annee valide';
   } else {
-    field.className = 'form-control invalid';
+    field.className = 'champs annee invalide';
   }
 }

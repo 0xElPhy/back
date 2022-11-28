@@ -18,6 +18,12 @@
     $requete = $db->query("SELECT * FROM artist ORDER BY artist_name ASC");
     $myArtist = $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
+
+    if (!(isset($_GET['id'])) || intval($_GET['id']) <= 0)
+    {
+        header("Location: artists.php");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +55,12 @@
             <section class="datas">
                 <div class="groupe g_titre">
                     <input class="champs titre" name="titre" value="<?= $myDisc->disc_title ?>" 
-                        placeholder="Titre" type="text" readwrite>
+                        placeholder="Titre" type="text" required readwrite>
                     <label class="label titre" for="titre">Titre</label>
                 </div>
                 
                 <div class="groupe g_artiste">
-                    <select class="champs artiste" name="artist_id" readwrite>
+                    <select class="champs artiste" name="artist_id" required readwrite>
                         <option value="<?=$myDisc->artist_id ?>"><?= $myDisc->artist_name ?></option>
                         <?php
                             foreach ($myArtist as $artist)
@@ -73,26 +79,28 @@
 
                 <div class="groupe g_annee">
                     <input class="champs annee" name="annee" value="<?= $myDisc->disc_year ?>" 
-                        placeholder="Année" type="text" readwrite>
+                        placeholder="Année" type="text" required readwrite>
                     <label class="label annee" for="annee">Année</label>
+                    <small id="annee" class="form-annee">Année non-valide</small>
                 </div>
                 
                 <div class="groupe g_genre">
                     <input class="champs genre" name="genre" value="<?= $myDisc->disc_genre ?>" 
-                        placeholder="Genre" type="text" readwrite>
+                        placeholder="Genre" type="text" required readwrite>
                     <label class="label genre" for="genre">Genre</label>
                 </div>
 
                 <div class="groupe g_labelD">
                     <input class="champs labelD" name="label" value="<?= $myDisc->disc_label ?>" 
-                        placeholder="Label" type="text" readwrite>
+                        placeholder="Label" type="text" required readwrite>
                     <label class="label labelD" for="label">Label</label>
                 </div>
                 
                 <div class="groupe g_prix">
                     <input class="champs prix" name="prix" value="<?= $myDisc->disc_price ?>" 
-                        placeholder="Prix" type="text" readwrite>
+                        placeholder="Prix" type="text" required readwrite>
                     <label class="label prix" for="prix">Prix</label>
+                    <small id="prix" class="form-prix">Prix non-valide</small>
                 </div>
             </section>
 
@@ -120,5 +128,6 @@
     </section>
     
     <?php include('../structure/footer.php'); ?> 
+    <script src="/back/serveur/php/PDO/assets/javascript/form_validation.js"></script>
 </body>
 </html>

@@ -12,8 +12,16 @@
     <?php include('./structure/nav.php'); ?>
 
     <section class="container">
-        <h3>Accueil</h3>
-        <p>Bienvenue sur le projet "Velvet Records".</p>
+        <section class="sub_container debut">
+            <h1>Accueil</h1>
+        </section>
+
+        <section class="sub_container">
+            <p>Bienvenue sur le projet "Velvet Records".</p>
+            <p>Afin de consulter les pages <i>Artistes</i> et <i>Disques</i>, vous devez télécharger le fichier :
+            <a href="/back/serveur/php/PDO/assets/record.sql" download>records.sql</a></p>
+            <p> Puis le charger dans une base de données.</p>
+        </section>
     </section>
     
     <?php include('./structure/footer.php'); ?>

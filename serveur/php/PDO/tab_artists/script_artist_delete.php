@@ -10,10 +10,10 @@
 
     try {
         // Construction de la requête DELETE sans injection SQL :
-        $requete = $db->prepare("DELETE FROM disc WHERE artist_id = ?;
-                                 DELETE FROM artist WHERE artist_id = ?");
+        $requete = $db->prepare("DELETE FROM disc WHERE disc.artist_id = ?");
         $requete->execute(array($_GET["id"]));
-        $requete->execute();
+        $requete = $db ->prepare("DELETE FROM artist WHERE artist.artist_id = ?");
+        $requete->execute(array($_GET["id"]));
         $requete->closeCursor();
     }
 

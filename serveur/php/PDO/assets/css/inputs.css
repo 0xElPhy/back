@@ -85,7 +85,7 @@
   .invalide,
   .invalide ~ label,
   .invalide ~ small{
-    color: red;
+    color: rgb(236, 30, 30);
   }
 
   .invalide ~ small {

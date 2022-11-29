@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="groupe g_image">
-                    <input class="champs image" type="file" name="image" required readwrite>
+                    <input class="champs image" type="file" name="image" readwrite>
                     <label class="label image" for="image">Image Artiste</label>
                 </div>
             </section>

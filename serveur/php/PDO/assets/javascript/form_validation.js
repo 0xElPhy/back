@@ -15,12 +15,11 @@ inputs.forEach((input) => {
 function validate(field, regex) {
   console.log(field.value);
   const currentYear = new Date().getFullYear();
-  if (regex.test(field.value)) {
-    if (field.name == "annee" && field.value>currentYear){
-      const currentYear = new Date().getFullYear();
-      if (field.value>currentYear) {
-        return false;
-      }
+  const origin = new Date("1860-04-09").getFullYear();
+  console.log(field.value<origin);
+  if (regex.test(field.value)) { 
+    if (field.name == "annee" && (field.value>currentYear || field.value<origin)){
+      return false;
     } 
     field.className = 'champs annee valide';
   } else {

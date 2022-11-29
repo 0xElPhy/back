@@ -26,15 +26,15 @@ CREATE TABLE IF NOT EXISTS `artist` (
   `artist_url` varchar(255) DEFAULT NULL,
   `artist_picture` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`artist_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table record.artist : ~13 rows (environ)
+-- Listage des données de la table record.artist : ~27 rows (environ)
 REPLACE INTO `artist` (`artist_id`, `artist_name`, `artist_url`, `artist_picture`) VALUES
 	(1, 'Neil Young', 'https://neilyoung.warnerrecords.com/', 'neil_young_8471.jpeg'),
 	(2, 'YES', 'https://www.yesworld.com/', 'yes_5341.jpeg'),
 	(3, 'The Rolling Stones', 'https://rollingstones.com/', 'the_rolling_stones_1973.jpeg'),
 	(4, 'Queens of the Stone Age', 'https://www.qotsa.com/', 'queen_of_the_stone_age_3268.jpeg'),
-	(5, 'Serge Gainsbourg', 'https://www.universalmusic.fr/artistes/20000103696', 'serge_gainsbourg_7619.jpeg'),
+	(5, 'Serge Gainsbourg', 'https://www.universalmusic.fr/artistes/20000103696', 'serge_gainsbourg_8104.jpeg'),
 	(6, 'AC/DC', 'https://www.acdc.com/', 'ac-dc_6666.jpeg'),
 	(7, 'Marillion', 'https://www.marillion.com/', 'marillion_8320.jpeg'),
 	(8, 'Bob Dylan', 'https://www.bobdylan.com/', 'bob_dylan_6791.jpeg'),
@@ -42,7 +42,22 @@ REPLACE INTO `artist` (`artist_id`, `artist_name`, `artist_url`, `artist_picture
 	(10, 'The Clash', 'https://www.theclash.com/', 'the_clash_2917.jpeg'),
 	(11, 'Kendrick Lamar', 'https://oklama.com/', 'kendrick_lamar_1484.jpeg'),
 	(12, 'Vald', 'https://www.vald.store/', 'vald_7290.jpeg'),
-	(13, 'Daft Punk', 'https://daftpunk.com/', 'daft_punk_4927.jpeg');
+	(13, 'Daft Punk', 'https://daftpunk.com/', 'daft_punk_4927.jpeg'),
+	(14, 'The Weeknd', 'https://www.theweeknd.com/', 'the_weeknd_6969.jpeg'),
+	(15, 'Coldplay', 'https://www.coldplay.com/', 'coldplay_2523.jpeg'),
+	(16, 'Denzel Curry', 'https://www.denzelcurry.com/', 'denzel_curry_1780.jpeg'),
+	(17, 'Dua Lipa', 'https://www.dualipa.com/home/?ref=https://www.google.com/', 'dua_lipa_8056.jpeg'),
+	(18, 'EMINƎM', 'https://www.eminem.com/', 'eminƎm_1680.jpeg'),
+	(19, 'Linkin Park', 'https://www.linkinpark.com/?frontpage=true', 'linkin_park_9903.jpeg'),
+	(20, 'Twenty One Pilots', 'https://www.twentyonepilots.com/', 'twenty_one_pilots_4132.jpeg'),
+	(21, 'Queen', 'https://www.queenonline.com/', 'queen_3630.jpeg'),
+	(22, 'Ice Cube', 'https://icecube.com/', 'ice_cube_3721.jpeg'),
+	(23, 'Taylor Swift', 'https://www.taylorswift.com/', 'taylor_swift_9707.jpeg'),
+	(24, 'Rihanna', 'http://www.rihannanow.com/', 'rihanna_3825.jpeg'),
+	(25, 'Depeche Mode', 'https://www.depechemode.com/', 'depeche_mode_3240.jpeg'),
+	(26, 'Orelsan', 'https://orelsan.show/', 'orelsan_4482.jpeg'),
+	(27, 'Katy Perry', 'https://www.katyperry.com/', 'katy_perry_9375.jpeg');
+	(28, 'Angèle', 'https://angelevl.be/', 'angèle_2594.jpeg');
 
 -- Listage de la structure de table record. disc
 CREATE TABLE IF NOT EXISTS `disc` (

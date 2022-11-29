@@ -31,18 +31,18 @@ a:hover{
   color: rgba(156,85,156,1);
 }
 
+h1{
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
   box-sizing: border-box;
   margin-right: auto;
   display: block;
-}
-
-h1{
-  font-size: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .sub_container {

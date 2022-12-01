@@ -11,7 +11,7 @@ for(let i = 0; i < action.length; i++) {
 
   action[i].addEventListener("mouseout", function() {
     if (action[i].className.slice(-6) == "active"){
-      return;    
+      return true;    
     }
     else {
       action[i].style.backgroundPosition = "center top";
@@ -47,13 +47,3 @@ function artist_card_anim(evt, card_id) {
   document.getElementById(card_id).style.display = "flex";
   evt.currentTarget.className += " active";
 }
-
-// function openTab(container) {
-//  //var obj = JSON.parse('<?php echo json_encode($test) ?>');
-//   console.log(container);
-//   var x = document.getElementsByClassName("container");
-//   for (var i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//   }
-//   document.getElementById(container).style.display = "block";
-// }

@@ -91,17 +91,9 @@ z-index: 10;
   text-shadow: -1px 1px black;
 } 
 
-.card:hover h2 {
-  opacity: 1;
-  /*writing-mode: vertical-rl;
-  text-orientation: use-glyph-orientation;*/
-}
-
+.card:hover h2,
 .active h2 {
   opacity: 1;
-}
-button {
-  color: red;
 }
 
 @-webkit-keyframes maskUp {

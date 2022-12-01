@@ -71,14 +71,12 @@
             } 
             else {
                 // Le type n'est pas autorisé, donc ERREUR
-                header("Location: disc_new.php");
-                echo "<script>alert('Type de fichier non autorisé')</script>";
-                exit;
+                $pochette = Null;
             }
 
         }
         else {
-            $pochette = Null;
+            $pochette = "lol";
         }
 
     // En cas d'erreur, on renvoie vers le formulaire
@@ -90,11 +88,6 @@
     // Connexion à la BDD
         require "../db.php";
         $db = connexionBase();
-
-        var_dump($_REQUEST);
-        var_dump($pochette);
-
-        echo "<br>";
 
         try {
             // Construction de la requête INSERT sans injection SQL :

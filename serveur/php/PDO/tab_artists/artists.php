@@ -60,45 +60,50 @@
                             <span class="liste id">
                                 Fiche Artiste n° <?= (($artist->artist_id) < 10) ? "0".$artist->artist_id : $artist->artist_id; ?>
                             </span>
+
                             <span class="liste site">
                                 Site Internet : <a href="<?= $artist->artist_url ?>" target="_blank">
                                 <?= (isset($artist->artist_url)) ? parse_url($artist->artist_url)['host'] : ""; ?>
                                 </a>
                             </span>
-                            <!-- <a href="artist_detail.php?id=</?= $artist->artist_id ?>">
-                                <span class="liste details">Détails</span>
-                            </a> -->
+
                             <span class="liste discographie">Discographie :
-                            <ul class="liste disque">
-                                <?php
-                                    $artist_id = $artist->artist_id;
-                                    $n = 0;
-                                    foreach ($discography as $disque)
-                                    {
-                                        if ($disque->artist_id == $artist_id)
+                                <ul class="liste disque">
+                                    <?php
+                                        $artist_id = $artist->artist_id;
+                                        $n = 0;
+                                        foreach ($discography as $disque)
                                         {
-                                            $n++;
-                                            echo "<li><a href='/back/serveur/php/PDO/tab_discs/disc_details.php?id=$disque->disc_id>'>$disque->disc_title ($disque->disc_year)</a></li>";
+                                            if ($disque->artist_id == $artist_id)
+                                            {
+                                                $n++;
+                                                echo "<li><a href='/back/serveur/php/PDO/tab_discs/disc_details.php?id=$disque->disc_id>'>$disque->disc_title ($disque->disc_year)</a></li>";
+                                            }
                                         }
-                                    }
-                                    if ($n == 0)
-                                    {
-                                        echo "<span>
-                                                Aucune discographie renseignée.<br>
-                                                <a href='/back/serveur/php/PDO/tab_discs/disc_new.php'>
-                                                    Cliquez ici
-                                                </a>
-                                                pour ajouter un disque de cet artiste
-                                            </span>";
-                                    }
-                                ?>
-                            </ul>
+                                        if ($n == 0)
+                                        {
+                                            echo "<span>
+                                                    Aucune discographie renseignée.<br>
+                                                    <a href='/back/serveur/php/PDO/tab_discs/disc_new.php'>
+                                                        Cliquez ici
+                                                    </a>
+                                                    pour ajouter un disque de cet artiste
+                                                </span>";
+                                        }
+                                    ?>
+                                </ul>
                             </span>
+
                             <div class="wrap">
                                 <a href="artist_form.php?id=<?= $artist->artist_id ?>"><button class="modifier">Modifier</button></a>
-                                <a href="script_artist_delete.php?id=<?= $artist->artist_id ?>"><button class="supprimer">Supprimer</button></a>
+                                <a href="javascript:
+                                    if (window.confirm('Êtes-vous sûr de vouloir supprimer : <?= $artist->artist_name ?> ?\n\nCette action engendrera la supression de toute sa discographie.'))
+                                    {
+                                        window.open('script_artist_delete.php?id=<?= $artist->artist_id ?>', 'Confirmation de la suppression');
+                                    }">
+                                    <button class="supprimer">Supprimer</button>
+                                </a>
                             </div>
-
                         </div>
                     </div>
                 </div>

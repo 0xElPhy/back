@@ -30,7 +30,9 @@
             <a href="javascript:history.go(-1)"><button type="back">Retour</button></a>
         </section>
 
-        <form class="sub_container formulaire" id="disc_form" action="script_disc_ajout.php" method="post" enctype="multipart/form-data">
+        <form class="sub_container formulaire" id="disc_form"
+              action="script_disc_ajout.php" method="post"
+              enctype="multipart/form-data" onsubmit="return validateform()">
             <section class="datas">
                 <div class="groupe g_titre">
                     <input class="champs titre" name="titre"

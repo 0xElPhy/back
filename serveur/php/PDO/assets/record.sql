@@ -46,7 +46,7 @@ REPLACE INTO `artist` (`artist_id`, `artist_name`, `artist_url`, `artist_picture
 	(14, 'The Weeknd', 'https://www.theweeknd.com/', 'the_weeknd_6969.jpeg'),
 	(15, 'Coldplay', 'https://www.coldplay.com/', 'coldplay_2523.jpeg'),
 	(16, 'Denzel Curry', 'https://www.denzelcurry.com/', 'denzel_curry_1780.jpeg'),
-	(17, 'Dua Lipa', 'https://www.dualipa.com/home/?ref=https://www.google.com/', 'dua_lipa_8056.jpeg'),
+	(17, 'Dua Lipa', 'https://www.dualipa.com/home/?ref=https://www.google.com/', 'dua_lipa_8283.jpeg'),
 	(18, 'EMINƎM', 'https://www.eminem.com/', 'eminƎm_1680.jpeg'),
 	(19, 'Linkin Park', 'https://www.linkinpark.com/?frontpage=true', 'linkin_park_9903.jpeg'),
 	(20, 'Twenty One Pilots', 'https://www.twentyonepilots.com/', 'twenty_one_pilots_4132.jpeg'),
@@ -56,7 +56,7 @@ REPLACE INTO `artist` (`artist_id`, `artist_name`, `artist_url`, `artist_picture
 	(24, 'Rihanna', 'http://www.rihannanow.com/', 'rihanna_3825.jpeg'),
 	(25, 'Depeche Mode', 'https://www.depechemode.com/', 'depeche_mode_3240.jpeg'),
 	(26, 'Orelsan', 'https://orelsan.show/', 'orelsan_4482.jpeg'),
-	(27, 'Katy Perry', 'https://www.katyperry.com/', 'katy_perry_9375.jpeg');
+	(27, 'Katy Perry', 'https://www.katyperry.com/', 'katy_perry_9375.jpeg'),
 	(28, 'Angèle', 'https://angelevl.be/', 'angèle_2594.jpeg');
 
 -- Listage de la structure de table record. disc
